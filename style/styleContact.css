@@ -1,0 +1,74 @@
+body{
+    background-image: url(https://www.myfreetextures.com/wp-content/uploads/2014/10/IGP5374.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: .2fr 8fr .2fr; /* add rows for our header/footer */
+    grid-template-areas: "header header header header" "survey survey survey survey" "footer footer footer footer"
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    background-color: coral;
+}
+
+.left1{
+    display:flex; 
+    width: 69%;
+    margin: 8px;
+    justify-content: center;
+    border-style: dotted;
+}
+
+.left2{
+    display:flex; 
+    width: 69%;
+    margin: 8px;
+    justify-content: center;
+    border-style: dotted;
+}
+
+.right1{
+    display:flex; 
+    width: 69%;
+    margin: 8px;
+    justify-content: center;
+    border-style: dotted;
+}
+
+.right2{
+    display:flex; 
+    width: 69%;
+    margin: 8px;
+    justify-content: center;
+    border-style: dotted;
+}
+
+footer{
+    grid-area: footer;
+    justify-content: center;
+    text-align: center;
+    font-family: cursive;
+}
+
+#survey {
+    grid-area: survey;
+    overflow: hidden;
+    /* 16:9 aspect ratio */
+    padding-top: 0%;
+    position: relative;
+}
+
+#survey iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
