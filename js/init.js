@@ -33,6 +33,13 @@ function createButtons(title, data){
 //Todo: on scroll, change the story 
 function putStory(data){
     document.getElementById("story").innerHTML = `<p>${data.whathappenedatthisplaceandhowdoyoubelieveitaffirmedyourracialethnicidentity}</p>`;
+
+    if(data.storypicture){
+        const imgsrc = data.storypicture; 
+        let  imagehtml ='<img src = "' + imgsrc + '" alt = "">'; 
+        console.log(imagehtml);
+        document.getElementById("story-image").innerHTML = imagehtml;
+    }
 }
 
 fetch(url)
