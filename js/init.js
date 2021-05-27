@@ -11,9 +11,29 @@ let url = "https://spreadsheets.google.com/feeds/list/1saTqG7FBGlnyCDwon8SGppg_F
 function addMarker(data){
     L.marker([data.lat, data.lng]).addTo(map)
     .bindPopup(`<h2>${data.wheredoyoubelieveyourracialethnicidentityaffirmationtookplace}</h2>`);
+
+    createButtons(data.wheredoyoubelieveyourracialethnicidentityaffirmationtookplace, data); 
 }
 
+function createButtons(title, data){
+    const newButton = document.createElement("button"); // adds a new button
+    newButton.id = "button"+title; // gives the button a unique id
+    newButton.innerHTML = title; // gives the button a title
+    let buttonPanel = document.getElementById("story-buttons"); 
+    newButton.addEventListener('click', function(){
+        map.flyTo([data.lat, data.lng]); 
+        putStory(data); 
+    })
+  
+    
+    buttonPanel.appendChild(newButton); //this adds the button to our page.
+  }
 
+
+//Todo: on scroll, change the story 
+function putStory(data){
+    document.getElementById("story").innerHTML = `<p>${data.whathappenedatthisplaceandhowdoyoubelieveitaffirmedyourracialethnicidentity}</p>`;
+}
 
 fetch(url)
 	.then(response => {

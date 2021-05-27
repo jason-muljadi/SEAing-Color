@@ -18,8 +18,8 @@ body{
     grid-area: tour; 
     display: grid; 
     grid-template-columns: 0.7fr 0.3fr; 
-    grid-template-rows: repeat(auto-fit, 1fr); 
-    grid-template-areas: "story-image map" "story-image story"; 
+    grid-template-rows: repeat(auto-fit, 1fr); /* To accomodate many story rows */
+    grid-template-areas: "story-image map" "story-image story-buttons" "story-image story"; 
 }
 
 #story-image{
@@ -35,10 +35,14 @@ img{
     position: sticky; /* doesnt work*/ 
 
 }
+
+#story-buttons{
+    grid-area: story-buttons; 
+}
+
 #story{
     grid-area: story; 
 }
-
 
 footer{
     background-color:rgb(205, 255, 238); 
