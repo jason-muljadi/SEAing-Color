@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UCLA Cultural Organizations</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="style/styleOrgs.css">
+
+        <!-- Leaflet's css-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+        <!-- Leaflet's JavaScript-->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="left1"> <a href="index.html"> Main Page </a> </div>
+            <div class="left2"> <a href="About.html"> About </a> </div>
+            <div class="right1"> <a href="SEAsources.html"> SEAsources </a> </div>
+            <div class="right2"> <a href="ContactUs.html"> Contact Us </a> </div>
+        </header>
+
+ 
+        <div id="logo1">
+            <picture>
+                <img src="https://pbs.twimg.com/profile_images/1278819289525415936/c07T11Yy_400x400.jpg" alt="APC at UCLA" class="center" height=300px width=300px>
+                </picture>
+        </div>
+        <div id="club1">
+            <a href="https://uclaapc.wixsite.com/home"> <h2 style="text-align:center"> UCLA Asian Pacific Coalition (APC)</h2> </a>
+        </div>
+        <div id="clublink1">
+            A strong, united APIDA community that continuously strives for the uplifting and empowerment of all its members, 
+                addresses community issues within UCLA and beyond, represents and preserves the APIDA voice, and promotes equity 
+                through sustainable leadership.
+                <br>
+                <br>
+                As the Asian Pacific Coalition at UCLA, we are dedicated to dismantling systems of racial oppression and striving 
+                 for collective liberation* through coalition building* with other communities of color. We see the effects of these 
+                systems exacerbated by the COVID-19 pandemic, the 2020 elections, and the continued state-sanctioned violence* 
+                against Black and Brown communities. In light of these trying circumstances, we are committed to creating programming 
+                that challenges us to deconstruct our perceptions of society and that is digestible and relevant to all members of our 
+                community, both returning and new. In doing so, we hope to continue the work of making our spaces more representative 
+                of all Asian Pacific Islander Desi American (APIDA) narratives.
+        </div>
+
+
+        <div id="logo2">
+            <picture> <img src="https://community.ucla.edu/images/orgs/studentorg/2809-hero.jpg" alt="AHS at UCLA" class="center" height=300px width=300px> 
+            </picture>
+        </div>
+        <div id="club2"> 
+            <a href="https://associationofhmongstudentsucla.weebly.com/"> <h2 style="text-align:center"> Associaton of Hmong Students at UCLA (AHS)</h2></a>
+        </div>
+        <div id="clublink2">
+            We, the Association of Hmong Students (AHS), provide a foundation of opportunities to assist students within and beyond UCLA. 
+            Through the advocacy of a higher education, analysis of intersectionalities, and the holistic development of student leaders, 
+            AHS cultivates a safe environment to empower students and nurture their Hmong identity. AHS upholds the voice of Hmong students 
+            by advocating for the cultural, educational, and social welfare of the Hmong community.
+        </div>
+
+        <div id="logo3">
+            <picture>
+                <img src="https://images.squarespace-cdn.com/content/5fbf00d95687f52b6b761d91/1614739051999-TPFV9ERAWPVRTSX25BPE/
+                aiaweblogo2-01.png?content-type=image%2Fpng" alt="UCLA at UCLA" class="center" height=300px width=300px>
+                </picture>
+        </div>
+        <div id="club3"> 
+            <a href="https://www.uclaaia.org/"> <h2 style="text-align:center"> Associaton of Indonesian Americans at UCLA (AIA)</h2></a>
+        </div>
+        <div id="clublink3">
+            Founded in 2020, the Association of Indonesian Americans (AIA) is an organization for Indonesian-Americans, 
+            people of Indonesian descent, and people who are interested in the political, social, cultural, or educational 
+            aspects of the Indonesian-American community in the United States. 
+            <br>
+            <br>
+            Political - Our very existence is political due to our under-representation in many facets of American society. 
+            As an organization we strive to educate our members through our internship program and general meetings of 
+            the history of Indonesia and Indonesians in the U.S. We understand that history is a political tool and by 
+            knowing our past, we can be grounded leaders in both the UCLA community and any communities we might find 
+            ourselves in the future. 
+            <br>
+            <br>
+            Social - An important aspect of any organization is connection. AIA is a place where everyone should feel 
+            welcome to explore their culture and history without judgement. We work to have a socially vibrant community 
+            of individuals where members feel safe to make friends and create memories. 
+            <br>
+            <br>
+            Cultural - The Indonesian-American experience is interlocked with the cultural disconnect between one’s 
+            identity as Indonesian and their identity as American. To understand our cultural identity, we focus on 
+            sharing the work of Indonesian-American artists through speaker events and cultural history in general 
+            meetings. This focus on culture assists our ability to intelligently discuss issues that our affect 
+            the Indonesian-American community.
+            <br>
+            <br>
+            Educational - Education is important in comprehending one’s identity. To meet this goal, we host a 
+            variety of guest speakers who are community leaders and scholars to share their experiences and 
+            bodies of knowledge. Furthermore, student leaders in AIA work on presentations and activities for 
+            our general meetings and internship program that explore Indonesian-American culture.
+        </div>
+
+        <div id="logo4">
+            <picture>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEhUQEBIT
+                EhUXFRMVExAVDxUSFRcaGRUXFhUVExUYHyghGBolGxgTITEkKCsrLi4uFx82ODMsNygtLisBCgoKDg0OG
+                xAQGy0mICYvLS8yLjgtListLS8tLS0tLS0rLS0tLS0vLS0tLi0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AAB
+                EIAOEA4QMBEQACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAwQFAgEH/8QAOhAAAgIABAMFBQUHBQE
+                AAAAAAAECEQMEEiEFMUETIlFhcTIzgbHRI3KRobIGFEJSgpKiFcHh8PFT/8QAGQEBAAMBAQAAAAAAAAAA
+                AAAAAAEDBAUC/8QAMxEBAAIBAgMECAUFAQAAAAAAAAECAwQREiExBRNBgTIzUWFxsdHwFCKRoeEVNFLB8
+                SP/2gAMAwEAAhEDEQA/APsxlXgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiRxhYsZJSi7T5M80vW9eKs7wmazWdpdnpAAAAAAEGezHZwc0r
+                qqXq6KNTm7nFN1mKnHeKszDz2ZktUYJrxUX9Tm01esvXirSNvh/LTbDgrO02n78nTzmaW7wl/Y/qep1Ot
+                iN5p+38ojFgnpb7/Ra4dxJYvda0y510foadJrq5/yzG0qs2CcfPrC8blCpxTMyw4ao1dpb/H6GTW57YcX
+                FXquwY4yX2lLlMVzhGT5tJsuwZJyY63nxh4yV4bTX2Ji14UeLZuWHFONW31V9DDr9TfBSJp4y0afFGS0x
+                K5gzuKfik/xRspbirFvaomNp2dHpDFXE8acmsOCaXSm3XnucaNfqMlpjFWOTbOnxViJvLr97zX/AMl/a/
+                qe/wATrv8AD9v5R3Wn/wAvv9EuS4rqloxI6Zcl4X4O+TLNN2hF7d3kjaXnLpuGOKs7w0zpMrnEmopybpL
+                dsi9orWbT0TETM7QyXxPFxG1gw28Wrfx6I5M67Nlttgr5/fJr/D46Rvks8lms1DeUE192/wBLInUa3Hzt
+                XePh9E93p7cosu8P4hHFvamua5/FM26TWV1ETERtMKM2G2Pr0XDWpAIs1CThJR5tNIrzVtbHaK9dnqkxF
+                omeivwnLzhDTPxbSu6W3+9mfQYb4sXDf2rdRet771XTYoAAAAAAo8a9zL1j+pGLtH+3ny+cL9N62PP5Pe
+                De5j/V+pjs7+3r5/M1PrJXTaoYWAk803Dkm22uXs0/zOHiiLa6Zp0j6fVvvvGniLN07jAzuPe7X3l8mc7
+                tT1HnH+2nSes8ljhnuofdRo0fqKfBXn9Zb4rJpVMn9ovZh6v5HJ7W9Cvx/wBNmi9Ofg0cr7Efux+SOlh9
+                XX4R8mW/pSlLHlicA9ufovmcXsv1l/vxlu1fo1bZ2mFh/tBFKUWvap38Hs/mcPtWIjJW0dfvZv0e81tE9
+                G3HludyOnNgU+MpvClXk36WrMXaETOnnZfppiMkboOCZnD0KFpSt2m6vfmvH/go7Nz4+6im+0/NZqsd+P
+                i8GodRkcQwoptqKTfNpVfqea461mZrG26ZmZ5S7PSADN41mJJRw485/LlXxOb2jmtWIx062adNjiZm1uk
+                IOHylhYvYydp7rwurtfg0U6S19Pn7i87xPRZmiuXH3lWydhiAAAAAAo8a9zL1j+pGLtH+3ny+cL9N62PP
+                5IshhSll1GMtLd1L+plWlpbJo4rWdp58/N6zWiuaZmN/+IZ8Lxmve35OUqKb9n6iY27zf9VkanHE+h8nv
+                CMZQk8GUFGXj49af/aJ0GSMd5w2rtb2+1GorNq95E7x8mwddjZ3Hvdr7y+TOd2p6jzj/bTpPWeSxwz3UP
+                uo0aP1FPgrz+st8Vk0qmT+0Xsw9X8jk9rehX4/6bNF6UtLK+xH7sfkjpYfV1+EMt/SlIWPLE4B7c/RfM4
+                vZXrL/fjLdq/Rq6zvEceEmnGKVvS6u143ZOp1uoxXmNoiPBGLBjvXfd7leHTlNYmM0+TStO/DltR6waLJ
+                kyd7nlF89a14McNg67GNAZmZ4LCW8W4eVWvw6HMzdl4786Tt+8NVNXevKeaq8nmMLeEm14Rd/wCLMs6XV
+                4OdLbx9+Eru9w5OVo2+/aucL4j2ndkqkldrk/ozZotb308F/S+ajPg7vnHRonRZkePjRhFyk6S/7SPGXJ
+                XHWbW6PVazadoYuJxRSak8FPS+623t+Rxb9od5aLd3vt06/RtjTcMbcfV7LineU3grUltK3t+QntCZtxz
+                i5x48/oRpuXDx8vv3tXJZuOJG1s+sfA6um1Nc9eKPOGTLinHO0rBoVgAAAAo8a9zL1j+pGLtH+3ny+cL9
+                N62PP5PODzSwo20va6r+Znns+1Y09d59vzNTH/pK5LGiuco/3I2zkpHWY/VTFZnwYcsRYmZi4ck47+Ueb
+                OHN4z62Jp05fs3xWcenmLfe7fO856pxTAc8Npc1TXw/4sy63FOXDMR16/otwX4LxMqvBs7HSsOTprle1r
+                6mXs7VVmndWnaYXanFPFxR0lqOSW7dednTmYiN5ZGFxLH7accPD3S2vxb5v0SOHrMv4nLXFj5uhgp3VJv
+                ZuxjSS8FR3KxtGzn9XpIxOAe3P0XzOL2X6y/34y3av0atLP5VYkHHrzi/BnS1WnjPj4fHw+LLiyTjtvCl
+                wbNNfYz2avTf5xMPZ2omJ7i/WOn0X6nHHrK9Jax1mRXz2aWFHU03ulS+pRqdRGCnHMbrMWOcltoMrncPE
+                Xdav+V7NfAYdTjyx+WfIyYrUnnCbExFFXJpLxbLbXrWN7TyeIiZ5QxOHd/MOcV3e8/x2X4nF0n/AK6u16
+                9Obdm/Jhis9W6dxgYvFJPExY4K5Kr9Xu38EcbWzOfPXBH39w26eIx45yS18HDUUoxVJckdelK0rFa9IY7
+                TNp3l2z0hhyj2GOq2hLp5N018GcOa/hNVG3oz8v4lvie+w8+sNw7jAAAAACPMYKnFxlyZXlxVy0mlukvV
+                LTWd4Z3+h4f80/8AH6HP/pGL2z+30afxl/ZD3/Q8P+af+P0H9Jxf5T+30Pxl/ZC5lMnDD9lb9W92bcGmx
+                4Y/JCjJltf0lgvVgFHNcKw5u94t82uvqjDn7PxZZ36T7l+PUXpyVlwJdZuvuoz/ANJr42lb+Mn2Qv5TJQ
+                w/ZW/WT3ZuwaXHh9CPPxZ8mW1/SWDQrAKuTyEcNyabd+PQy6fSUw2taszzW5M1skRE+C0alSpjcPhLEWJ
+                bTVNpda5WZcmjpfLGXpMfutrmtFJp4LZqVPJRTVNWnzTItWLRtPRMcucM3G4LhveLcfLmvzOdk7LxWnes
+                zDTXV3jlPNxHgcf4pyfokvqeI7Krv+a0y9TrLeEQ0cvl4wWmKr5v1Z0cWGmKvDSGW97XneyUseWXk8tPt
+                5zlGl3qfjbVV8DmYMGSNXfJaOXPZqyZKzhrWJah02UAzOOZaU1FwTbTfLz/APDm9pYL5K1mkbzDVpclaT
+                PFLShdK+dKzoxvtG7M9JQAAAAAAAAZ+b4nolKNRelJu8VRk7TdQi1u9vFFVsu0zHs971Fd13tVaT2bTkk
+                +dKr/AA1L8Szih5cPNwqLv26cKTd7J7JLwaI445e9O0ucTO4cXpct00n3ZOm1aTaVW7VeInJWJ2kiJdLN
+                Qcdd9265NO706dPO72rmOOu25tO+x+9Q0ud7J07TTT2pOLV3utq6occbbmz394jp1ttLzi4u7qtLV3fQn
+                ijbc2dYONGW8XydNNOLT500910/ERMT0QrZzPaJRglG2m054iw06dVF07l5Hm9+Gdv4eojfmllmkpQg1JO
+                add20qW6bWxM3iJiJ8UbeLvt4+P8AEof1OqX5onihCHM5+ELW7a02knS1NJJyqk9+TPNskVTETKTGzUIOp
+                OtrezdLxk0u6tnu/BkzaI6kRMmPm4Q2k+jdKMpbLm9k9hN4jqREy8lmoqcYbtyTaai3GlXNr1E3jeI9pt
+                y3TnpAAAAAAAAAAAAAABfT8gKWYyLk5tTpTSUloUuSa2b5bMrtj3mfe9RbZJiZVtxcZOLjGUN0pWpab59e6t/UmadJiUbvcLKKPZpN/Zx0rz2St/gIptt
+                7jfq8llE23b3xIYn9qiq/x/MmaG7nEyMXFwv+N4idJ03LVy6roeZpExt79zfm9jk0oSh3e87b7NU+XOL57LqTwctjdw8guz7NyftKSfRNNNKMXfd25ebI7
+                vlscXPdPlcuoJ8rbttRUelcj1WuxMuc1gSlsp0qpxeHGcX50+v5eQtWZ8SJcwyaisNRk12a0q97VJb+ey3Iim223gb77vHku83rdPEjiadK5qtr8NiO759f
+                Hc3eYuRtyqbSnKMpR0p7rStn0TUYiab78+pEvMzkYzk52t0oyTipKlb2vk6b8fQWpEzMkW25JcXAjbldLQ4eSTfM9TEdfdsbvFgL7OSl7CcejUk9K+D7qIiv
+                SYnob9Vk9oE75AAAAAAAAAAAAAAxpQxdf7x2btTpb97sl3XHRXV3Pn4Gfa3Fx7f8++azeNuHf/q1jzmsVVrkm4rSlJJK+89VOMl4209tiy02izzG2w5Yixq78ot
+                8qlFRWnxrTJX1tPcjnxnLhcYk8XW67TV2kdMdP2fZ2tTcqr2dT53ZEzbfx6+WxGyScpdo1J4iVx7NQi3Fr+LU0nvdrfpVHqZni57o8Hs3NdvKMW3topJN9xc
+                nTve/ETvHFMffI5ckEY4ksPGi3N93uNqUW7g7S1K+fzPP5pi0J5bwsQTbwmlJqp25Raa2VXatHqOsI9qHCni61faau0lri4/ZqFy0tSquWjk7t79a8xNt/Hr
+                5bJ5OprF1OVz2xoJRpadDUNW1breW/SiZ4t9/ecv2XMxJqEnFNtRbSTSbdbJWWWmYjk8qOVWI1iRbm1ojpbjKLt6tSWpX0iVV4p3iXqduS1w/3UPa9lJ6k07re
+                09yynowieqnjNxWPDRNubbhpg5J3hRj7S2junzoqnlxRt1+j17EmZwqeE5xc4Ri1KKjrqXd0z0rd0lJeWom0c43jlCInlLzMxTwn2eHKK7TDlp7NxbrEg5SUOfJ
+                Ppewtzryj2fMjrzlNmsxJ4cnhKWp92NwlCm6WpqS5K7vyPd7TNZ4eqIiN+aHheDLDcsPRphSlCpakn7M03S3bqXncjxjiazw7cvvd6tO/PxaJc8AAAAAAAAAAAAA
+                AAAkCAAAAAAAAAAAAAkCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AP/9k=" alt="BURSA at UCLA" class="center" height=300px width=300px>
+            </picture>
+        </div>
+        <div id="club4"> 
+            <a href="https://www.facebook.com/bursaucla/?ref=page_internal"> <h2 style="text-align:center"> Burmese Student Association at UCLA (BURSA)</h2> </a>
+        </div>
+        <div id="clublink4">
+            BURSA at UCLA aims to promote awareness of Myanmar (Burma) and build a community for students 
+            who are Burmese or interested in Burmese culture.
+        </div>
+
+        <div id="logo5">
+            <picture>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFRgVEhUSGBgVGRUcFRoZGhgZGRoYGhoaGhoaGhgeIS4mHCEtHxgcJjgmKy8xN
+                TY1HCQ7QDszPy40NTUBDAwMEA8QHhISHzYrJCw0NDU0NDQ0NDQ2NDQ2MTQxNjQ3PTQ0ODQ0NDU0NDE0NjQ0PT00NDQ0NDU0NDQ0MTE1NP/AABEIAOEA4QMBIgACEQEDEQH/xAA
+                cAAEAAQUBAQAAAAAAAAAAAAAABwECBQYIAwT/xABIEAACAQICBwUFBQUECAcAAAABAgADEQQxBQYHEiFBURMiYXGBMkJScpFigpKhsRQjorKzMzVDwRUWNHPCw9HwJFNjdNLh8
+                f/EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EACsRAAICAQMDBAEDBQAAAAAAAAABAhEDBBIxIUFREyIyYbEjcaEFNFLw8f/aAAwDAQACEQMRAD8AmWIiAIiIAi0RAKWi0rE
+                ApYRujpKxAKWEWlYgFLStoiAIiIAlLSsQClotKxAKWi0rEAWiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiaJrZtEoYYtSoAV6wuCAf3aH7bDM/ZHqRJUXJ0gbxUcKCWIAHEkmwA8TN
+                S0ttFwFAlRUNZh7tEb4v03zZPzkNac1ixOMa+Jqsy8kXu018kHA+ZufGYmdMNP/kyLJOxu11zcUMKgHI1HLH1RQP5ph6u1HSByOGX5abf8TmaUP1sB4k5ASQtU9mdStu1MaWpIb
+                EUxwqMPtH3B4e1x5TSUccF1RFtnzYDaBpWs4SiFqOfdWiG9TY8B4kgSYdC1K7UUbFKiViB2iobqG8OJ5W4XNupzldF6KoYZBTw9JEUclHEnqzHix8SSZ985ZyUviqLCJ5VqgVWZ
+                slBJ8gLmQHU2h6QNU1UrlVZiVplEKBeSWK3y53v4yIY5TuhZ0DEj3VbaZRrkU8WFoVDYBr/unPgTxQ+DcPGSDeVlFxdMFYiJAEREAREQBERAEREAREQBERAEREAS1mAFyQAM5dIc
+                2oa4GozYLDt3FNsQw99hnTB+EH2up4ZA3tCDk6QPXaXrjXFR8HSWpRReDuQVeoD8B5J4jieOVuMZASWNTsZQ0rhjg8coerQHce9nKcAHVs95eAbMHuk3uZrusezjFYclqAOIp8
+                ig/eKPtJ73mt/ITrhKMPa+j/JDRpM+rRuj6uIqLSoIzu+QHIc2Y5Ko5kzJaD1VxWKqdmlKolvbaojoqDqbgXP2RxPhnJx1Z1aoYGnuUhdmt2jt7Tnx6Doo4D85OTKo8ckJGI1M1
+                EpYMCpV3auI+IjuoelMHn9o8T4DhN1iJxOTk7ZYRESAaztC0j2GArtezOhpp13qnc4eQJPpOepI+2LTQetTwqG4o9+p87iyj0Qk/fEjid2CO2P7lWJu+pGvr4QrRxBZ8PwA956Q
+                6rzZB8PLl0OkRNJQUlTCOpMLiUqIr02VkYAqykEMpyIM95BOzvXA4NxRrt/4ao2Z/wAJyfbHRSfaHr1vOgN5wZIODplrLoiJQCIiAIiIAiIgCIiAIiIAiIgGobRdY/2PDEI1q1a
+                60uqi3ef7oPDxKyBP++PE/WbJtA01+1Y2owN0pHsqfTdQneb1feN+m70mtTvww2x+2VZ92htKNha6YinfepsCR8S5Oh81JHrOl8NWV0V0N1dVZT1DAEH6Gc26u6Eq42utCiM+Lu
+                fZRL8XP+Q5mw8Z0dgMItGklJL7tJERb8TuooUX8bCYamrXklH0mVmE0hi2DWH6EcwRwP6iemj8WW4H9RzNyTzPpPIX9QxPN6Pc2eKSju7GXieK1hcrkRxt1HUT2napJ8GQmH1m
+                02mDw71347osi83c8FUeufQAnlMnWqBVLMQFAJJJsABxJJ5C0gLX3Wk46v3CRQpEiiPiPvVCOp5dB5mbYobpfQNbxWJeo71KjbzuzO56sxufIeHKeURPQKCIiAJMuyjWU1qRwl
+                Vr1KAvTJzalkB4lSQPIrIamR0BpVsLiKeIS/7tgWA95Dwdbc7qT626TPLDfElHTUTyoVFdVdTdWAZT1BFwfoZ6zzywiIgCIiAIlIgFYiIAiIgCYXW/Sf7Ng69YGzKhCfO/cT+Jh
+                M1I72y4srhKdMf4tZd75UVm/m3ZaCuSQIYAn0YHBPXqJSoqXdyFVfHqTyAHEnkAZ88m7Znql+y0u3rL+/rDI506Z4hPBjwLeg5TuyTUEVSM5qhq3TwFAU1sztY1qlrF38OijID/
+                ADJmwGVicDbbtljF4zAbxuP++B4k8+NhL8Dg9zj1t+n63n2VlJHA2PI+M+NsW68Gpvf7PFfrPOnhwYsvqtU/NWaqcnHamU0k27uNzDC3iOYmQBmKpUXqOGcbqrkst1pwdWtg69L
+                Dm1R6bKvG175i/K4uL+M00zlOcp1SbVX+Ss0kku5GG0nXXtycLhW/cqbVXB/tWHug/ADn8R8BxjyZilqtjmYouDxW8M7oyj8bWX85kH1A0kF3v2ZuHIPSLfhD8Z7cNkFSZmzV4l
+                9SmyMVdWVlJDKwKsCMwQeIMsmpUREQBERAJ52WaS7bAIpN2oM1JvJbMn8DKPSblIl2J4o72JpHK1J18++rflufSS1PPyx2yaLiIiZgREQC2IiAXREQBERAEibbbU72FTkRiG9R2
+                Q/zMlmRRtpwzs+DKKW3u2RQObuaW4o8TY28prhrerIZg9mGrf7TiO3qLelhyDY5NVzVfEL7R+71k5iYbVbQy4TDU6C2uou5+JzxZvrl4ATMyMk90rJEREzAlpEpUcKCWIAAJJJs
+                ABmSeUh3X7aAa+9h8GxFLiKlQcDU6qnRfH3vLO0YObpAlLA6bw1Z2p0a9F3T2lR1YjkeAPWZOc77PabNpHDBLizMTb4RTct6EcPWdDy2WChKkwnZW0REzBpGvmpCY1TVo2TEqOB
+                yWoB7j+PRuXlIPxFBkZkdWR1JVlYWKsMwROpzIP2p6Vw2IxCphkDVaZ3KtVcnOQpgD2yD73LIX426cE5Xt7fghmiRPSvRZGZXVkdDZlYEMp6EHKec6yoiIgEgbGqlsbUX4sO5/D
+                Up/wDyMmuQtsZpXxlVvhoEfidD/wAEmmcGf5lxERMgIiIBbERALoiIAiIgCWNTBtcA2Nxfkeol8QBEEzC6U1nweHB7bEUlI90Nvv6It2P0im+AZqYvTenMPhE38RUVR7ozdj0VR
+                xY+UjnT+1cm64GlbMdpVAv5rTB/Nj6SN8fjqtdzUru9Rzmzm58gMlHgLCbwwSfy6EWbJrjrxWxpKJelh/gB7z+NQjP5Rw8+BmpRE7IxUVSIZv2xyirY12Oa0G3R5vTBP0/WTbOZ
+                dBaXqYSulejbeS4Kn2XQ+0jeBHPkbHlOgtXNPUsbRWtROfB0PtI1uKsOvjkRxE5NRF7t3YlGYiDIn2h69klsHgmNydytUTO54GnTIzPIsPIccsYxcnSJG0PXsktg8ExuTuVqiZ3
+                PA06ZGZ5Fh5DjlqurF8FiEq1qQZ6ZIKOLMl+ag5OBl5+N41ZvgsQlWtRDPTJBRxZk5XW+TAZf/d5JmntC0dI0RiMMy9pbunIMB7jjkR1zHlGTIqcMb45+z0MOCOJp6iPtkuj8H
+                ya16s0dKUVxOFZRWC91sg4HuVOjDIE8QfCQzXosjMjqyspKsrCzKwzBE3vQGm62BrMrK27e1am3A3HC46MOuRHoZteterVHSlEYnCFRWC91sg4HuP0YZAniPKX0+pXxl/wy1mje
+                F2usXwyFYnpXosjMjqyspKsrCzKwzBE8yZ3nCSvsTwfdxNb4mp0x9wMzf1F+klSavs70WcPgKKsLO4NR+t6neAPiF3R6TaJ52SW6TZcRESgEREAREQBERAEREAREQCOdsb1lw1
+                I02daZqFa26SAbr3A1vduDwyvaQ0qgZCdO6X0cmJo1KFUXSopU9R0YeINiPETnDTWiqmFrvh6o76HPk6n2XXwI4+HEcp16eSa2kM+GIidJUREQBMvq3p+rgawq0TcGwqIT3XT4T
+                0PRuX1BxESGk1TBJeuW0bt6a0MD2i9oo7V7EON7h2SAe9yLDyGdxr+r9JsBiVqYihd09xhxQMPaXlv2yOWY8sJoLSjYXEJiERHNM33XFwQeBsfdNsm5H6SZ8Rh8NpfDLVosA63
+                AY+0j80qDp/1BE488ZQjUDq00sSyfqq1+Pst0/oSlpGiuIwzL2m73DkHA9x+hB4XORmk6B01WwNZgVbd3rVqZ4G45jow6856aJ0nX0diGR1O7cdrTOTDkyHK9sjzHA+G46e0JR0
+                jRXEYYr2m73WyDAe4/QjLqD4Th+XVdGj101gXpZfdjlw/Bdp3QlHSNEYjDMvabvdOQcD3H6EHnyPhNI0DputgazKytu71q1NuBuOFx0YDI8x4WIaB01WwNZgytu71q1M8Dccx0Y
+                DnzHpN309oajpGiMRhSvabvdbIMB7j9CMuoPhI+XuXI/t/0svuxy4fg+TWvVmjpSiuJwjIKwXutkKgH+G/QjIHkfCRpqpq6+JxyYeorKEYtiFYWKohG8pHUmy/evM9oLTVbA1irK
+                27vWrUjnccLgcmHI8/oZMGHw1PeNZUCvUVAzbtmKrcqrc+G8Z14tQ9rj/qPM1eleCS62nwz7ALSsRKHIIiIAiIgCIiAIiIAiIgCIiAJqOvuqS46ldLLXpg9kx4BhmUY9DyPI+oO
+                3RJTcXaByxXoMjMlRWVlJVlYWZWGYInnJ8111KpY5d9SKeIUWV7cGAyWoBmOhzH1BhDS2iq2GqGliEZHF7XyYfEjZMPEetjO7HkU19lWj4oiJqQIiIAmX1a1grYGsKtI3BsKlM
+                nuuvQ9D0bl5XExESGk1TBO2IoYbS+GWrRYB1uAxHeR8zTcDl/1BE03RGlK+jsQyOrbtwKtM5MOTIcr2yPPI+GpatawVsDWFWibg2FSmT3XToehzs3I9RcGYMRh8NpfDLVosFdci
+                faR8zTcdP8A9E83PgcXuR6Ok1cVH0svWL/gpp7QlHSNFcRhWXtN3utkHA9yp0Iy48QZpGgdN1sDWYMrbt7VqbcDccxfJh15j0ntobSOI0diDTZXILAVKXE73IMnVrZEZ5HwknF6
+                Aw+IqJXq0+8oBseFxa4Drzt0MwS3dV0Z2SyLTL0snuxtWvJb/ovD4l6OL3LsFDISCtwRdd5SOJGYvlM8JRVtKma0ePKTl0b6LgrERJKiIiAIiIAiIgCIiAIiIAiIgCIiAJj9L6I
+                o4lDTxFNXU5XzU9VYcVPiJkIjgEOaw7K6qEvgnFRf/LchXHgrey3ru+s0DH4CrQbcr06lNujqVv5E8G8xOop44igjqVdFdTmrAMD6HhN4aiS56kUctROgsds/0dV4nDqh602en+
+                SED8ph62yfBN7L4tfJ6ZH8SEzZaiPeyKIViTPT2S4QZ1sW33qQ/SnMjhNmujkNzSeoR8dRyPVQQD9IeoiKIJpoWYKgZmOSqCzHyUcTJG2e6s6So1lrAChTawqLVveovTsxxB4mx
+                O7bxFwZV0foqhQG7Qo0qY+wir9SBxn3TLJn3KkiaPmbCIXFQopdQQGIG8AcwDyn0ASsTnLWIiIIEREAREQBERAEREAREQBERAEREATzeqq+0wF8rkCekh/bcoNXC3APcr5/NTl
+                oR3y2glxKgORB8jeXMwHEkDzkO7FsWEr16HACoiuo+0jbp9bOPpNm2v4zcwIp869RF9FvUPpdAPWWeOp7SLN5WupNgyk9AQZV6ir7TAeZtOfNm9MDSeGsAO9U5f8ApVJJ+1bQo
+                xGCNQKC+GPaD5LWqD8Pe+7JliUZKN8izdVcHiCCPDjDOBxJA8+AkUbGNLgGrhGPA/vaQ+i1AB+E/inltm0sGelhFIIQdrUH2muqA+S7x+8I9J79osltKgbIg+RBlWcDMgefCad
+                sv0L+zYFCRZ8Qe1blYMAEH4AD5kyKNbsfWxuOqI281qz0qFO/dAVzTUKp4Aki5PUxHFuk0n0Xck6GWuh4BlPkRPWc16a1TxODVXxNEIrNuqwZG71i1u4SQbAn0kt7KdL1MRg2F
+                ZmdqFQoGY3JTdVlueZG8RfoBE8SjHcnaIs3meJxCc2T8QluOxIpU3qNlTR2Pkqlj+k5bfvku4Us5LNwHtMbn8zIxYt99Q2dVgys1/UbG9tgMM97ns1Vj9qn3G/NTNglH0dEiIi
+                QBERAEREAREQBERAKS0m2cuMwmt1N2wdcU7lijcBmRzA9Lw3SLQjukldWz5v9dcFv7nbC97b1m3L/AD2tbxymwo1+ItblbpOer85NeptN1wdEVLhguRzC3JUH7tpljyOTpno67
+                RQ08Yyi+fJnZEW2z+1wvyV/5qcl2RFts/tcL8lf+anOrB80eW+DVtQcWaGkMMzXAdtw34XWoCi+m+V+k2bbNjC+Iw9BbndRmKjjdqjBV4de4frNU0zQalR0fiEzak1vno12I/n
+                X6TNvXGP02jL3qfaIV6blGnvn+NT9Z0te/d4T/gfRi9nH95Yb5qn9KpOgaiBgVYAgggg5EHgROf8AZz/eeG+ap/SqToQTDUfJfsFwc8braL0mM7YeqLZ3ag36k03+olcDSbSmk
+                +9e1eqzP9minG34FVPMibbtp0YoNDEiwZiaT+IALofSzj7wnrsW0au7XxJ4sWFJfsqArt9Sy/hmu9bN/eqFEoqoAAAsBkJzmtZU0mXc7qJjmZz0VcQST9BOjzIx1h2WLUd6uGr
+                lWqO7lKi7ybzksbOvFRc8w0xwyjG1LuGZ/WbRdLS2HRcPiaYCVA++gFUcFZd0gMLe3+U+jUjVg6PpPTNUVd99+4Tct3VW1t5r+zn4yGdM6t43R7K9RWS53Uq06nAtYmwZSGHBS
+                eIGUlPZVpeviMNUOIqNUanV3FZrb27uI1iRnxJ4njLTg4w9rtEn3bTMb2Wjq9s6gWmPvsA38O9IewWig+jsTiLcadfDqPAWYN/WX6TfNtWNsmGoA+071D5IoUX9ah+ku1c0Tva
+                AqrYb1ZMRUA6spO5/TWTB7YJ+WD69jWN3sLUpHOlVJHyuob+YPJEkLbGcbu4qrSvwq0t4fNTYW/J2+kmmZZlU2EWs1pr1fXPBo5RqvEGxIVioPiwFpktOo7YeqKd9806gS2e8V
+                NreMgi1vC3+XKc+SbjVHo6DRw1G5yfHg6Co1VcBlIKkAgg3BByIM9Zq2z6m64JO0vxLlL/AWuPTMjwM2mXTtJnDlhsm4p3TKxESSgiIgCIiAJQiViAYj/V7C7/adhR3733twZ9
+                bZX8ZlVErKwS5Sly7EiHbZ/a4X5K/605L00XaFqdWx70WpVKSdktRWD73HfKEW3QfhmmKSjJNlXwafpzB72gsHVGdF2v8rvUQ/wAW7KbHsFv4mtVOVKiVHzVG4fkjfWb4mqr/A
+                Oi/2B2QvuMA4vuB98upyvYG3KNQtVXwNGqlR0Z6r710vYKFAUcQDmWPrNPVW1q+4rqRTs4/vPDfNU/pPOhRIv1V2c4jC4uliHrUGWmXJC728d5WUWuLe9JQlM0lJ2giNttf+zY
+                f/f8A/LqT12Mf7HV/9w/9OnMvtA1ZqY+jTp0npoUqb5L71iN1lsLA8e9L9QdXKmBoPSqsjs9QvdN6wBVFtxA49385O5elt7km1Gc8/wCmKiaRLVK9YU0xrF71Km6EWubgrfIKM
+                rZToaRlrVsyNeu9fDVUTtWLOjhrbxzKsuVzxsRmTxkYZRi2pdyGfLtW1gwuIw1JMPXpVWFYMQjB7KKdRbm2XFhPv2K/7NX/AN//AMunMCmyXFXF8RhgOZAckem6L/USTNVdApg
+                sOtFCW4lnYixZza5tyHAADoBLzlFQ2xdkkR7Wsd2mPZQbihTprboxvUb1s6/SUTZhpAgHdw/Gx41Df17s2TSOznE1sa+Ieth9x64dl7+9uBh3crX3ABnJTh5tsUokUc7ap1Wwu
+                kqKv3SldqNS2V2LUTx6Xa9/CdEyLNZNm+Ir4uriKFaggd1dA+9vKwC3JspHtAn1kore3HPn5ymWSlTQQImKr6vYV37R6FEve5YoOJ6nqfOZeUmRaMpR+Looi2yyl0RBAiIgFLx
+                LbxALxEoDK3gCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCDEoTAPG8S2JPQtRdKrEQyC+WtESCDyaeTREkFkREAvWXrEQD0lDESAWyoiJLBfLWiJAPIwIiSCqxE
+                QChlsRAKrPRYiAeqy+IkAsaUiJJJ5xESC5//9k=" alt="MAS at UCLA" class="center" height=300px width=300px>
+                </picture>
+        </div>
+
+        <div id="club5"> 
+            <a href="https://malaysiaucla.wixsite.com/masbruins?fbclid=IwAR36bTmFaWEG67H1Vtd2BIv6HF_uIoTfr59-9PEDIg8SeklYN2sdh8VRLx4"> <h2 style="text-align:center"> Malaysian Association of Students at UCLA (MAS)</h2> </a>
+        </div>
+        <div id="clublink5">
+            The Malaysian Students Association at UCLA was founded in 2010 by a small group of friends who sought to create 
+            a cultural student organization that would also serve as a home away from home for other Malaysians studying here at UCLA.
+            <br>
+            <br>
+            MAS UCLA has since grown rapidly, with over a hundred current members of diverse nationalities. We aim to promote 
+            Malaysian culture to the wider UCLA community, provide a supportive and close-knit environment for all its members, 
+            and connect current members with alumni and the rest of the UCLA community.
+            <br>
+            <br>
+            MAS UCLA is committed to enrich its members’ college experiences here at UCLA, doing so by organizing a wide range 
+            of events and activities including cultural performances, festival celebrations, annual camping and ski trips, and 
+            hangouts. With a strong leadership and driven committee, MAS UCLA is poised to grow and influence the club and its 
+            members even more in the near future.
+        </div>
+
+        <div id="logo6">
+            <picture>
+                <img src="https://photo.isu.pub/ukspro/photo_large.jpg" alt="UKS at UCLA" class="center" height=300px width=300px>
+                </picture>
+        </div>
+        <div id="club6"> 
+            <a href="https://unitedkhmerstudents.weebly.com/"> <h2 style="text-align:center"> United Khmer Students at UCLA (UKS)</h2> </a>
+        </div>
+        <div id="clublink6">
+            United Khmer Students is a student-run organization dedicated to fostering a positive environment for 
+            Khmer students and Khmer culture at UCLA. The club serves to represent and be an active voice for the 
+            greater Cambodian community and to advocate for its relevant issues. Due to the lacking representation 
+            of Khmer people, UKS feels itself to be a necessary component within the UCLA community. UKS not only 
+            provides a social environment for Khmer and non-Khmer students alike but works towards creating a politically 
+            and culturally active space. The club is consistent with cultivating cultural education and traditions for 
+            its general membership as well as providing leadership opportunities for members to be involved within their communities.
+    ​        <br>
+            <br>
+            UKS understands the significance of higher education and its condition within the Khmer population; 
+            Khmer Outreach Retention Education was created as an effort to combat low representation of Khmer-Americans 
+            in higher education. Along with KORE, various events, and components, the Mentorship Program provides on-site tutoring, 
+            field-trips and a mentor/mentee relationship for at-risk Cambodian youth at various LBUSD schools.
+            <br>
+            <br>
+            UKS is a resource for networking not only within the alumni and the UCLA community but also within the intercollegiate 
+            realm of Khmer student organizations. UKS is an active component to the efforts of the Khmer Student Coalition (KSC), 
+            a collective organization composed of various Cambodian organizations within the California universities and state 
+            universities system. UKS strives to provide a positive college experience for students through social, cultural, and 
+            political activities as well as being an advocate for Khmer community, culture and education.
+        </div>
+
+        <div id="logo7">
+            <picture>
+                <img src="https://community.ucla.edu/images/orgs/studentorg/504-hero.jpg" alt="SP at UCLA" class="center" height=300px width=300px>
+                </picture>
+        </div>
+        <div id="club7"> 
+            <a href="https://www.facebook.com/ucla.samahang/"><h2 style="text-align:center"> Samahang Pilipino at UCLA (SP)</h2> </a>
+        </div>
+        <div id="clublink7">
+            Samahang Pilipino is a multi-faceted student organization which addresses the needs of the Pilipin@ 
+            and Pilipin@ American community at UCLA and the greater Los Angeles area.
+            <br>
+            <br>
+            Since 1972, Samahang Pilipino has been committed to addressing the five key aspects of Pilipino life: 
+            cultural, social, political, academic, and community. Samahang also serves as a family away from home 
+            and a bridge to our cultural roots.
+        </div>
+
+        <div id="logo8">
+            <picture>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCA8RDxEPEQ8PDxEPDw8PDw8REBEPDxESGRQZGRgUGBgcIS4lHB4
+                rHxgYJjgmOC8xNTVDHCU7Qjs0TTw0NzQBDAwMDw8QGBERGDQhGCExNDc0NDE0MTQxMTE0MTQ0MTQxNjQ/NDQxPzE0NDQxNDExND8xMTQ0MTE0MTQxNDQ0NP/
+                AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAQIDBAUGB//EADoQAAICAQMCBAIGCAcBAQAAAAECAAMRBBIhBTETIkFRFGEyVHGBkZ
+                IVI0JSU2KToQYzVYOxwfCCJP/EABkBAQEBAQEBAAAAAAAAAAAAAAACAQMEBf/EAC4RAQEAAQEEBwgDAQAAAAAAAAABAhEDEiHREzFBUlORoSJRYXGBorHSw
+                eHwQv/aAAwDAQACEQMRAD8A/UYiWAnxZHsAJMSZciSTEnEuRJECWAlyMAJcCQBJlyMJMCSBLjNQCTEmXIklgJAEsJUjCSIEmXIwkxEthERAREQEREBERARE
+                QPMAkxJE+RI9QJMSZciQREsBLkYAS4EgCTLkYCSIEkCXIkEmJMuRgJYCAJMqRhJESZ0kYCTESmEREBERAREQEREBERAREQPOEmJIny5HooIkiSBLkYASwEk
+                CJejCTAkiXIkEmJMuRgJYCAJMuMBJxAkypGEmIlsIiICIiAiIgIiICIiAiIgIiIHBiSIEkCfOkdwCWEASZcYSYAky5EgkxJAl6MJYCAJMuRhJECTLkYSYiU
+                wiIgIiICIiAiIgIiICIiAiIgIiIHGBJAgSZ4pHYkiBJlyJAJaRLCVoxAlgIAnJrNQQVrTBdjj32j3MZ5TDG5Zf73SfMktukdgkieeatQnmWwW+pUjGfsnZp
+                rd6htpXP7JGCI2e13stzLG45dfHTjPhZrPXX4GWOk1l1jWTET0IIiICIiAiIgIiICIiAiIgIiICIiAiRmIHNJEASZ5JHQEknHJ4xyTE4NQxufwVOEXBtYev
+                8s6446ozy3Z81jqnsJWlRgcGxvoj7PeWGis7nUPn5cL+GZ2IgUBVAAHAAlgR79ptxlZNe28XH8FYeDqHx8hg/wDMsldNA3MyqW43O4BJ9smdkpbUrDDorgZ
+                IDKGA/GMdjhLvacfP8q3rpoyTWUsQq21sSQoAdSScE44PfAP4TqnyGn03/wCLpIq2Uu50oNiopIHwz5OOxOM4zkZ5we03OtuAu0zajUNbXq1oospTTfE2qd
+                NXcd29fDXG9snAGFHqeeqX0u4ZxkZIJAzyQO5/uJlqNVVWAbLErDHapd1QE+wyeTPA6Lr7LrdM1irvCdXqZilZt/UauuoeZchchcsAcE/YJ29S0lq3HVVrT
+                dijwrKLvLlAxbKPghSckEEYbC8riB7IMmfHW6iwN1DW06i7jpdGppqaunYM16hqwRt3cEA4z7g5np9Z6o9JHhsnOi1eow+Cu5GpCu2Odg8RieRA9k2KGClgG
+                YMyrnzEDGSB6gZH4iaz5Dq992jvFzX/ABJr6d1G5RatSMCr6bJygUeGMjORkfvTbU6nqFVV7A24FDOtmpTSla7gyhVVaWyUILZB5G36XMD6mJ8d/iQahNL1
+                Ch9VY4PTdRqRYUoV1Khg9fC42EFccbhg+Y8Y+nyKaWe21nWtWd7bAgIUZJJ2gDgfL0gbK6kkAglThgCCQcA4PtwQfvmk+O6PdbXertp7KH6klrWNd4e06sA2
+                VJ5GJOK96k47UrOpLtYaWQPqTetlbalSukGorrZG5oO3w2G9Rjdk4DDvgQPp4nz2n1FupfbVq7Kkqo09oYVVeNcz7vNYrqQqeQjACnIbkYmfT9ZqNYQBqPh
+                glGnsbwFrdrGcuN36xWArOzy4GTzzA+iVgc4IODg4OcH2l58s+pffbRW9yXHVXMqaWvSi2xErp3O5tG3ANiAnudyiY6C27Uavp9zXujN0/Ws9arRsZkv0q
+                sOVY4b1wxxxg+4fWqwIBBBB5BByDLT5Xo1116VU13DSLVodJeRTVTlmt8QY2spVax4eMAAkk8jHNtDqtXqrAo1Pw6rpKLS1VVbb7TbchZS4b9WwrBx3wRhhz
+                kPqJUmcPRtY1+k02oYANfp6bnAztDOisQM+mTOtjNkE5iZ5ibowlokgTyyOjk11/hoSPpE7VH8xmmh0/hoF7k+Zj7sZzAeJqf5aF+7cf/f2npYnovs4zHtv
+                G/x6OGPtZ3PsnCfz68PohlBBB7EEGY06OtCGRdpAxnLdvnzzOgSZO7L1x0+IJn4q7tmecbsY9MzQmcOkO+x7f2cCtD7gHJ/vOe02mmWGM68r6Sa2/ifOxUm
+                stvY3XS1gVoEULTjwgFAVMKVG0emASPvmV/TqLM76a2JsFpYqN28JsDZ77to259uJo1TntaR/8iV+Hs/jN+VZPS7Xwb54fsaTvfk0+gpr2+HTXXsDhAiKgU
+                OwZwMdslQT74Epqumae1t1lFdjFQjFlB3ICSEb95ck8HI5Mt8Nb/Hb8ix8Nb/Hb8ix0208HLzw/Zu7j3p68l20dRsFpRd4TZvx5ivPlPuOTx8zMNN0jS1Y8
+                PT0phDWNtajCHHkHsvA8vaX+Gt+sN+RY+Ft+sN+RZvS7Twb54fsbuPfnryV0/StNW25KKlbYa8hBuCHGUB9F4Hl7cSKOk6VFKpp6lUqE2hBtCcEIB2C8Dgc
+                cSx0t31lv6ayPg7vrT/kWOl2nhXzw/Zu5j3593J0W6atySyKxZGrbKhtyHupz3B9pX4OrwjQUVqipQ1sNyFT3BB7iYfBXfWn/Isj4K/62/5Fm9JtPCvnj+xu
+                Y9+fdydd+nrsG10VxkHDKGGffBnJ+iNLt2eCm3eH7c7gu0HPfO0lfsOJHwN/1x/6aSPgNR9cf+mk3pM/Dvnjzb0ePfnllyXv6TpXCh6KmVE8NRsAC18eTA/Z
+                OB5e3A4ltR0zT2bS9NblFNakqAQhxlQf3TgcduBMv0fqPrln9NJH6O1H12z+mkb+fh3zx5nR4+JPu5Nrumaez6VNbeYt9AfSICk/eAAfcASy9PoArApRRSSa
+                gqhdmTkhcdgT6duBOT9Han6/Z/Trj9Gar6/b/Srm7+Xcv2829Fh4k8suTe7pOldUVqKitaGtBsA2ocZQY/ZOBlexwJ0JSiHcqKrbEryFAOxSSq8eg3NgfMzz
+                W6Zqv9QtH+1XM26Zqv8AUrh/tVzZll3L6c29Fs/FnllyerRUlaJWiqiVqqIigKqqowFUDsABjEkmc+jpdKwr3NcwLE2MArEE5A444HE2JnWPPlpLZLqnMmZ
+                7ompbgSDYo7so+0gS2Jm9CEHyqTg+gM4Yydrplb2OTSvVXuLWoWdixIx6+k3/AEjR/EH3An/qc/R6kNKsVUnLZJAJ7n1npBQOwA+wATttJ7V97hsbbhjZpp9
+                XJ+kqvQs32Kx/6j40n6FVrn5jav4mdsTjcc7/ANafTnr+HeWe5weBbZ/mEKv8NDyfkTOxVAAAGABgAdhLxGGyxwtvXle29f8AvhNJ8G3K3h2PL1uudDqQNv6
+                jSV3pkd3Y3Ag89v1a/wB5i/Vn7eEQS9gqG4Mziu4VsMcbSSwxye/PtPSu0lTsrPWjsn0WZVZl5B4J7cgH7hJOnTIOxcqSQdoyCWDEj2ywB+0Azol5jdbUsor
+                rstVgXDKrMGQBcldqnJy+MHHKtyMcrOsMF3GooClrqzHIbbuwoxwWO0nbuBxg88gegdFSduaqztLMuUXyljliOOCTyZLaOkkE1VkgFQSikhTnIHHbk/iYHBR1
+                Zu1lYVnttSpUbfv2Xms9wMEDDH5ZPoZrq+pFGcCvctbIjOWC4d8bFAxkjJXJ9M+uDjo+CrDq4UAqzuoAULvfhrMAfSIJGfmfcy76WprBY1aF1GFcqpYDngHv+
+                034mBwU6m81aYMyCy8Zd2AKjyFyqAYyeOPYAk5xzTU9UdbPBABYGoG0Btud9YdSMYB2vnG4n7J6dunrZNjVqyDHlZQVGO3B44xMh07TAkiikFlKE+GnKEAFTx
+                2wAMfIQPMq6pcb2XAI3GmpdwQM++7JfgkALScYJz7c8bJ1hmIFdBYtaKRusVQH8JrGzjPAAIyM5JHpzO99HSwKtVWwYgsCqkEglgTx3ySfvMumnrXGERdpBXC
+                AYIXYCPby8fZxA8pOuKSh2llssoUAA761tFWwkAEY3WcklexxnE9PUXFXpUYxZYytnvgVu3H3qJVun0EqTRUShBQ+GmVIxgrxxjav4CR8BR4ddRprauoAVo6K
+                yrhdowD2OCR95gclvVmXJFLOC1qVlW3MzI+18qASAME5G44U8ZwDHVOptXTW9a72tw6qqWXgoq73wEGeQNobsCy/ZO06DTksTTUS42sfDXLDg4PHP0V/KPabL
+                Uo2kKAUUopAA2qcZUew8o4+QgeY/WgoLeH+ryVSzeu1iMcn91MHO75Hjtnms66xS0rS4Ndb7m2syV2CnxFydu0rgrzkfSHHrPWfSV7CgRUXBA2omFyMHAII5H
+                ymNOgpUL5EZlTwxYyqXK88E47cnjsMkTdBzt1YlrQtFtioXUMqWYLq21hwvbOexYnaeO2e2q0OisCCHVWBU7lIIzwfUfOZHQ6fk+BV5lCt5E5AAAB49Aq/lHt
+                NVAUBVAUKAFUAAADsAPQTYm1YmZkwTKMZSU5iU3RK0HoASYEtOEjo8vp3kstoPGDvT5qf/CepODqOnY7ba/8AMr5H8y+qzXR6pbV3DgjhlPdTOmXH2vP5/wBu
+                Oz9m9Hfp8v65OqIiQ7ETO2tWUq3Yjn0nJ0piauSSAzAE+053PTOY6dcvppzbpw1c3VNXra7FXT6Vb0Kku5tWva2e3J9prpNTq2x4mnWv3/WK3/Bng/4v6P1DU
+                30NpNR4KIjrYvxFlO4kgg7VHm4nrf4f0OppTF9m847+I9n/ADOt2c03+k6+xU2uO7u9HOHbx1vrp6PZUnHIxLRExBERAREQEREBESDAGVJgmUJmyCSZQmQTIZ
+                pSbQmZkwTKMZsiQmZsYJlCZSU5iRmJo9iIicHYnDqdFlvErOywevo3yM7ojVlxlmlefX1DadtymtvfujfMGdi2qRkMpHuCCJLorDDAEexGROU9MoJzsx9jMP8
+                AuTd7sJKpq9Vn9VWdztxkdlHqSZ1aakIioP2R39z6mKaEQYRQvvjufvm0jHC72/l1+kireGkeV1Doum1FqXWqxetdqkOyjGc9h35nfRSqKFXIA7ZOZtE6bs11
+                04qu0zyxmNytxnVOyfIiImoIiICIiAiJGYAyCZBMoTNkYEyhMEyrNKZRmlCZBMqTNkSEzNjBMoTKSEyrNDGUJlSMTmJXMTR70RE8zuREQEREBERAREQEREBER
+                AREgmAJlSZDNKkzZGBMoTBMqzSmajGZkwTKsZsiUMZRjIJlSZSQmVLQzShMqRgTKEySZmTKZatuiUzEJfSRETyvUREQEREBERAREQEREBESMwBMoxklpmTNkY
+                EypMEyrNKTRmmZMEyjGbIwYzMmCZUmUm0JlWaQzSpMqRgTKEyCZUmUy0JlCYJlGM2RK2YmeYlMfVxETxPWREQEREBERAREQERIJgCZVjDNMyZsjAmVJgmUZpS
+                RmlCYJlGaVowYzMmCZQmUm1JMoTBaVJmyMCZQmCZmTKTqkmVJkEyjGbIwYyhMEyjGUnVOYlMyZujNX2ERE8L2kREBERAREQERIMBKs0hjKEzdGBMqTIJlWaUm
+                jNKEwTM2MqRgzShMEyhMpKSZRmkEypM2RgTKkwTMyZSbQmVYySZmxlSMCZQmCZQmampJmZMEyhMqRicxKbomsfbxET573EREBERAREQIlTEQMzIMRLSqZmYia
+                lUzMxEplZmVMRKjFDKmRE1NVaUMRNSo0oYiWxUzIxE2JQZm8RKYiIiax//Z" alt="ThaiSA at UCLA" class="center" height=300px width=300px>
+                </picture>
+        </div>
+        <div id="club8"> 
+            <a href="https://www.facebook.com/thaiSAucla/"><h2 style="text-align:center"> Thai Student Association at UCLA (ThaiSA)</h2> </a>
+        </div>
+        <div id="clublink8">
+            As the only Thai organization on campus, the Thai Student Association aims to provide an 
+            opportunity to bring together those interested in Thai Culture.
+            <br>
+            <br>
+            Serving the community since 1980, Thai Smakom (สมาคมไทย, pronounced "tie samakohm", 
+            roughly translated as "Thai association/organization") seeks to increase visibility of 
+            the rich Thai and Thai-American culture at UCLA, and we welcome everyone (undergraduate 
+            and graduate students, alumni, etc) from any heritage and background, Thai and non-Thai alike. 
+            As UCLA's Thai Club, we strive to provide Bruins with the experience and exposure of our Thai 
+            culture through social events, education, community service, and our annual culture nights.
+        </div>
+
+
+        <div id="logo9">
+            <picture>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAxlBMVEX/6cD6zWL/7cP/7MLoEiPzjXj4sZX/8Mb
+                /8sf702TpGSfwcGP1nYXpIS3pHSnpIjD92bTqMjbpGTL7yqj70WPvdEb2pIvrPjnrSDv812X/5LvpJzT2qY3/5b380a35vp793LbyhnP4uJr6xKPxe2vnAB
+                buXVT1n4bmAADsR0T5yGDyjE3zl1HxgG/sTEjvbWDtVlD1plXtXkD3uFvxg0vvZVr4wF3uaUP1qlfsVz72sVn0n1P//tDrQzrxhEvzlH7932jykU8MqIjHAA
+                AL+klEQVR4nO2cC3eiPNeGaYIkogGDVKtRwANa2mqdTm3n+Djz///Uu8PBesB2+q1xylrfvtZMO5WQ5CZh596BjmEgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCI
+                IgCIIgCIIgCIIgCIIgCIIgCIIgCIIgHwpN/6TfgO3X7NPtl5cjRv6FFue//EiNnUO71WxL7zRW1E13Pj8Lw5CQcGhEAaVBGLapMQ7H8O+QGRNok1gE2m5HJI
+                DP2mEYUKNvtSicFY7zCiw4pwUnDWkrIO3IoGHYYobRCsMJVBnBRzSCw1EqBGoKDSNqs5ZuDz5jbUtfGCganksiE61IcDKeMra4r1lkuJCNMSXXc0NyaPkaGua
+                rGbdrhK2ntTFlsjmjtCU2o74+na82sz4Jp+6iT+Ybrk+Na7JDyGC12RBWk/x+QoKFuQi0ALaecBN0XgfWgjFdeJOMnMjgcvrD5GdSSDqbZpPQMbQ4atRgPPis
+                RQwikzDhBl9bM/g6Wy1n0N37Ra1FWdKYENqSmyZJL9B6PWYG6UNhqIlPQ0psPjQ5Gcz05aitplMYH25ympVucwEKV9IaMTYdExYz3qwRnizH8lwKjaHsDo1MY
+                RMmmcFmcLmJ6NtLTqN4FrcoXwX3YxjDe6sNJftt2SatJAhIdnqwsqgRpQpHP9Za4Y9AMjJYtOFyjMKGo6+aydLC7D78ERM6mY7NmlZImd36MZ0TLofyfApZow
+                HT0dKzVCYLZrClVhhzS3I27dDOlPEk4IMRzNJusiFGd9mFWy5OZJSePUsk3Jct3T+4VksYfjgUUDIQyQqqtJiA+5lfZwpp23ZrjE7WP6ajdJbS0JFrOO4Y7fh
+                sCjPSwEfyiAhAT0n2zTiIpXyoe0uK6MiGZHsSG/L0EN9WBn9ZVl3eDEl/hktY1Emyc/QRBEGQU1BKXyyccUb3dX7oLvlHjBvBJBxPWowXsbBNDsvSw4vw1uG/
+                DOmXUNIgae2SLiV8MlratgPY4t5K1wF2H8/hWKuEaLtk9MsOn2214EvTPsI0o8NybLpbLq7Bqjfo2kI4urQN/xBiA8sanwlwK/K4Sjhnkl022o5LjpoNdi6FK
+                90/Kb0cJWWpQtKMtUShD9tmbPFW4gg7qY2DPiHDYLA2hXDHPFMIV810dut0oUozyCdGpPablFKYZtw82yCSqN9vCvV0k3Jxq5xWv18SL4i+WXhTdDl8J3xsSv
+                s+4Ixk+R3h/ZrpmqMfWqHBoETb8S58v+77fu/SbcBJZJtRwmE2F1c9Pz3e64qOPuFcAtMmDVPd1i8yPNE8PV+4zI6y0JSizfeuA4+WwhmttUJdp1aYUdcKDyr
+                SCvMWtcKzWzY+dWW96I6SJxXSiZ3OXxqZUrmjg25T3hCudEsVHlZJmjCG/1AhDWz1yc8a/Ow541MNgoS1lsVnbvdR2Z3DkeH3oqIKIaKqr0WDV2p2KpEZmql6
+                2ja9T70HZU4Oe0ZkVRUSS3hPWYP+d7WNeoel5sJN78Kp+7N34f9Udose1VNRhZDUq8fiTlRiUX4n8iQLI1ymgelGKXkYdIlTHmk+XiGruSq/Ef3/lFNaBjJ0M
+                x20yFbfoLD/2XNXB13nq6oqhOio7jKJ/o1X3iSbihXPO3+jy9Y/eeJgHUhXfMOooEKDr92iyfqDSkpjjS2s1FZvO1//z7M3e0XZ2tyk3a2eQhra3rd8EL959q
+                TE1AyEkxmYwC7CUu9ZmeO93kfzvL7KKTR4Vz1vXYZ7fzyIfLmNQKb64m/XFjPY61/+QwUVwlJQdMn/rY6tN4yc3c5GlifqMVUIptKHFbBfsrhUUKExtNVtEU4
+                9sTnsExuJ4u6EwCt19/wvj88PF8pNSjpYRYXanBax5lK5R30S247QIJ2mPtgapS6fVWbl9qmiQljuds2ptd8qsRxzWPzAV+qqV38Cky4laFTOoQmvpkJtTh+K
+                Vr+q1dFC97L0QY6hbr/pbBkUPv66VObgUEIlFabmNF8wDs0pbZm7KwisnkoL1H8u63A9zPZBJyupcM+cSnfPnLIaJPcvP9LIll/vvO6dknpp9LtKRPsBtZoK9
+                82pvXcIkvvdbjDLVv99+ly/uEoXfzDh3f26qqkQpuIJc0rGzsEKyacCckT/Tnl3PV/bIHf/xq2mwl1zCn5sZ1ry9dGKwFeu97l+e3npPYDG+ndPTHdLVFQhDR
+                3vcz5NwZy+vDwQmSVbG7BQ3NTrvadL7/n7xS+Y1vMdHRVVqHPby8Kc/nS3wwb9Od6eoi1HddMkCrIo7+fjgzTDl0JVVbhrTu/AnOaDyLt51rdfeGLmuzt+/SZ
+                dHHd2Naqq0Bi+7Jz6Kt9ySTcRD3dkNLxjq8usn379p17+5daEV1bhvjkVWcu8IValKTFfCO8uuyD1Wz2I7rKQUlmFYE69Ivd78rKc3uibwirvA5+5ed4MkUmP
+                4dbaVVZhak6LWPNVLdMXJTpCnHq8R7tKPb1IvFJOvqtRXYW75vSTSnNenpzaXtT2TchuVlzfiV8vi12N6ircNac96cIqDhPXPrFFrIu3i4Ba/w0m1b9SdhqBK
+                6xQm9Mimt4qu683EZevvK/EBmYaUP0nL11MlTsrthwrqlCb0+95rAFzCj7Ffr0HfOR4v6G3V1KCJrBvaZqVbqpWU+GBOZV8IOy3ThDel/p3mKPatveuUi+Ubj
+                n6f6RQnYrU52LfnDrt1b6lLjsjUd7Tt0v1Xc9unTzrV0/7pvr2RwovPOdsb8+eYM+cqqVbtj28hw6oYMNlPrmzZZS7RSb2hsLP3tEjrHMDre+YUym7h0N41B8
+                IqHrHJhv53lVqYmGy59fpdYXQhDjzi5fHDG31e2tOD5J73bswOjyDWaYsDG0uiGxE7v9eV1h/LttgPzNgTruFOX3M7qrdzlnx8YMbXnMKhf5jul7oUJPdiG/M
+                Uk8M/vm7pTvmtPfVPUzuyUCUvLHM74X3qRC0Tp+jJvnt/KpCnaQNj2o7O1tzCsv4UXJfrtBgiet99rNpN01fI4Zc8+ZNhfXu8aso/wBtTtNnoP7j8bsnoNAt6
+                RPtK6m0op4U8+yiCPXce0OhHsLTlvCMUJE9XYLeHiX3oNDul5xDAlvpt4Ag+mfPqBgMor4TX1Hog8n7iCHcmlPILo6Te1BYHhvY2FQPPf3KUfGMKlHy9TGEBM
+                2O/n73/4DcnNYfSt6t0ffh0RKZwje2etSvje08o4K847TC3qOyrXO9k/gGmTm98Uoso1YoauUSG0JdSXc76qxjw614UmHv1nvTEZ6N1JzWb1VJcq8VStMq7Rm
+                bwaGd4At5B0zcEwp/PXpi9kEjaGTm9Jd0RyWbiPrXYVxzXiaR11yx2D3AFxB+nssVPiux+sDfI4EuqC+qLLnXY0gSYd/3jx6ED9ficPefb8CyHsdL3hFS2Wd7
+                L/iP6GszXZbcZyv+2nadzZC9jAFldC5c++i+4qGAWd2he0X5eCmVefRu479F75yWrgqZQj5whDDvrYhzxhjnRjgSIHBw3GliTE1XiOm4XxSd1KTj2rPWh45ga
+                k5laXKfuzZm1ECjsNWsMZ2uE1MLnh5N3BQeNEwhHFPuFF2F/COszH6/kuMppyEDM1vSGbXWtlapccxkE52adZRFzaW5LWonteDj9elBbJTn3sNRsetAOG0Pat
+                PGdNQcR/zVuEj4MOykRedQlFVAn5HGjvIDu59TwjTkD8J+UbQa6pD/V+z/ztaHdeOv048g5LSGcLMGAdxZrexTGnzAjsR5IJuY0+B6wtoijp1JcJ0mvWR8XWJ
+                kPxryLrZnNR1QGLeH5ixqNYbwL62Qz7o7L8HTd9V8vvltvYvoQOEg7lNYVTKFtBUHzvYpCxm/q+Zz7daQeWy+g7jI50jT5iCoPY/179DkCtmiG9wX6T8N31Wz
+                Wba79VeIau9h1C7czCCO+DhuteMO5yEJ4gBstWHbsW1un3Js3lXz+GzTlL2LbTeGkAmaM84X8Wp5bQVxskzmnZgQ/R+h5EXI/63mqkCjzaijZ2Y4qk14tGk2N
+                5OORcDN1j66a38NkuW0NL38aTRMQy3+BxcIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAI8kH8D0XMMIzJskiCAAAAAElFTk
+                SuQmCC" alt="VSU at UCLA" class="center" height=300px width=300px>
+                </picture>
+        </div>
+        <div id="club9"> 
+            <a href="https://vsubruins.com/"> <h2 style="text-align:center"> Vietnamese Student Union at UCLA (VSU)</h2> </a>
+        </div>
+        <div id="clublink9">
+            The Vietnamese Student Union (VSU), established in 1977, is the official voice of all Vietnamese students at 
+            UCLA through its advocacy for the cultural, educational, political, and social welfare of the Vietnamese 
+            community at large.
+            <br>
+            <br>
+            “The Vietnamese Student Union (VSU) at the University of California, Los Angeles strives to build a resilient 
+            and empowered community that is committed to solidarity with other marginalized communities of color.
+            <br>
+            <br>
+            Though physically separated by the pandemic, we hope to create a safe and welcoming space where members may 
+            be united virtually through community-conscious programs and projects that serve our needs at this time.
+            <br>
+            <br>
+            In light of the current political climate, we aim to promote civic engagement by equipping members with the 
+            skills and resources necessary to advocate for our community’s needs while closely collaborating with other 
+            communities in the fight for equity and justice.
+            <br>
+            <br>
+            By embracing our cultural heritage as well as our refugee and immigrant experiences, we will continue to shed 
+            light on our unique Vietnamese culture and history both on and off campus.”
+        </div>
+
+
+         <!--Insert JS script for the websites here-->
+        <script src="js/jsOrg.js">
+        
+        </script>
+    </body>
+</html>
