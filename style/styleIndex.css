@@ -3,9 +3,9 @@ body{
     background-attachment: fixed;
     background-size: cover;
     display: grid;
-    grid-template-columns: 0.7fr 0.3fr; 
+    /* grid-template-columns: 0.7fr 0.3fr;  */
     grid-auto-rows: minmax(5px, auto); /* should look at this later */  
-    grid-template-areas: "header" "landing" "temp-buttons" "tour" "footer"; 
+    grid-template-areas: "header" "landing" "tour" "footer"; 
     font-family: Verdana; 
 }
 
@@ -101,7 +101,7 @@ header{
   }  
 
 #landing{
-  grid-column: 1 / 3; 
+
   grid-row: 2; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:rgba(255,255,255,0.75);
@@ -113,7 +113,7 @@ header{
 
 #tour{
     grid-area: tour; 
-    grid-column: 1 / -1; 
+
     grid-row: 3; 
     grid-template-columns: 0.7fr 0.3fr; 
     grid-template-rows: 0.4fr 0.6fr; 
@@ -177,13 +177,13 @@ img{
 
 
 #closing{
-  grid-column: 1 / -1; 
+
   grid-row: 8; 
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 footer{
-  grid-column: 1 / -1; 
+
   grid-row: 9; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:rgba(255,255,255,0.75);

@@ -50,7 +50,7 @@ function addMarker(data){
       break;  
   }
 
-  createButtons(data.location, data); //For testing purposes; can leave in if buttons are placed properly lmao  
+  //createButtons(data.location, data); //For testing purposes; can leave in if buttons are placed properly lmao  
 }
 
 function makePopup(data, name) //Todo: map each letter to a descriptive name in the google sheet 
@@ -60,18 +60,18 @@ function makePopup(data, name) //Todo: map each letter to a descriptive name in 
               <p>Name: ${name}<p>`);
 }
 
-function createButtons(title, data){
-    const newButton = document.createElement("button"); // adds a new button
-    newButton.id = "button"+title; // gives the button a unique id
-    newButton.innerHTML = title; // gives the button a title
-    let buttonPanel = document.getElementById("temp-buttons"); 
-    newButton.addEventListener('click', function(){
-        map.flyTo([data.lat, data.lng]); 
-    })
+// function createButtons(title, data){
+//     const newButton = document.createElement("button"); // adds a new button
+//     newButton.id = "button"+title; // gives the button a unique id
+//     newButton.innerHTML = title; // gives the button a title
+//     let buttonPanel = document.getElementById("temp-buttons"); 
+//     newButton.addEventListener('click', function(){
+//         map.flyTo([data.lat, data.lng]); 
+//     })
   
     
-    buttonPanel.appendChild(newButton); //this adds the button to our page.
-  }
+//     buttonPanel.appendChild(newButton); //this adds the button to our page.
+//   }
 
 
 function addStories(data)
