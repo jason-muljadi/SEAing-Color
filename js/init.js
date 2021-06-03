@@ -14,6 +14,8 @@ let allMapLayers = {
   "Did not feel affirmed": notAffirmed
 }
 
+const formattedData = [] /* this array will eventually be populated with the contents of the spreadsheet's rows */; 
+
 let url = "https://spreadsheets.google.com/feeds/list/16vj49I0vAirmk54P13zE-V70Je4uq9G3jABb8T8OHA0/oxhqdjk/public/values?alt=json"; 
 
 fetch(url)
@@ -31,16 +33,21 @@ function addMarker(data){
   if(name == "")
     name = "Anonymous"; 
 
-  switch(data.feltaffirmed) //Note: doesn't work -- might not be string type??
+  //console.log(typeof data.feltaffirmed);
+  switch(data.feltaffirmed)
   {
     case "Yes":
       didFeelAffirmed.addLayer(makePopup(data, name));
+      break; 
     case "Maybe":
       maybeAffirmed.addLayer(makePopup(data, name));
+      break; 
     case "No":
       notAffirmed.addLayer(makePopup(data, name));
+      break;
     default: 
-      console.log(data.feltaffirmed + " is invalid value for feltaffirmed"); 
+      console.log(data.feltaffirmed + " is invalid value for feltaffirmed");
+      break;  
   }
 
   createButtons(data.location, data); //For testing purposes; can leave in if buttons are placed properly lmao  
@@ -60,23 +67,12 @@ function createButtons(title, data){
     let buttonPanel = document.getElementById("temp-buttons"); 
     newButton.addEventListener('click', function(){
         map.flyTo([data.lat, data.lng]); 
-        putStory(data); 
     })
   
     
     buttonPanel.appendChild(newButton); //this adds the button to our page.
   }
 
-
-
-function changePicture(data){
-    if(data.storypicture){
-        const imgsrc = data.storypicture; 
-        let  imagehtml ='<img src = "' + imgsrc + '" alt = "">'; 
-        console.log(imagehtml);
-        document.getElementById("story-image").innerHTML = imagehtml;
-    }
-}
 
 function addStories(data)
 {
@@ -86,14 +82,15 @@ function addStories(data)
   console.log(divs.length);
   for(let i = 0; i < divs.length; i++)
   {
+    console.log("adding story"); 
     let name = data[i].name; 
     if(name == "")
       name = "Anonymous"
     divs[i].innerHTML = "<h2>" + name + "</h2>" +
     "<p>" + data[i].affirmationstory + "</p>";
 
-
-    console.log("adding story"); 
+    divs[i].setAttribute("lat",data[i].lat); 
+    divs[i].setAttribute("lng",data[i].lng);
   }
 }
 
@@ -110,26 +107,32 @@ function addLayersToMap(formattedData)
 let scroller = scrollama(); 
 function setUpScroll()
 {
+  console.log("setting up scroll");
     scroller
     .setup({
-        step: ".step", // this is the name of the class that we are using to step into, it is called "step", not very original
+        step: ".story" // this is the name of the class that we are using to step into
     })
     // do something when you enter a "step":
     .onStepEnter((response) => {
         // you can access these objects: { element, index, direction }
         // use the function to use element attributes of the button 
         // it contains the lat/lng: 
-        scrollStepper(response.element.attributes)
+        console.log("Attempting to change something on scroll...");
+        handleScrollEvent(response.element.attributes); //Attributes of the html element...
     })
     .onStepExit((response) => {
         // { element, index, direction }
         // left this in case you want something to happen when someone
         // steps out of a div to know what story they are on.
     });
+
+
+    console.log("finished setup"); 
 }
 
+
+
 function formatData(theData){
-    const formattedData = [] /* this array will eventually be populated with the contents of the spreadsheet's rows */
     const rows = theData.feed.entry
     for(const row of rows) {
       const formattedRow = {}
@@ -142,11 +145,12 @@ function formatData(theData){
     }
     console.log(formattedData);
 
-    addLayersToMap(formattedData); 
+    addLayersToMap(formattedData); //Todo: take these out 
     addStories(formattedData); 
+    setUpScroll(); 
 }
 
-function scrollStepper(thisStep){
+function handleScrollEvent(thisStep){
   // optional: console log the step data attributes:
   // console.log("you are in thisStep: "+thisStep)
   let thisLat = thisStep.lat.value;
@@ -156,4 +160,17 @@ function scrollStepper(thisStep){
 
   //Todo: Change picture 
 
+  changePicture(thisStep); 
+}
+
+function changePicture(step){
+  const i = parseInt(step.index.value); 
+  //console.log(typeof i + ": " + i); 
+
+  if(formattedData[i].storypicture){
+      const imgsrc = formattedData[i].storypicture; 
+      let  imagehtml ='<img src = "' + imgsrc + '" alt = "">'; 
+      console.log(imagehtml);
+      document.getElementById("story-image").innerHTML = imagehtml;
+  }
 }
