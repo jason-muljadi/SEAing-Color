@@ -5,8 +5,28 @@ In addition, there are links to multiple resources and cultural organizations th
 
 This map is supplementary to the Southeast Asian Admit Weekend festivities, but we hope to make it more personal through a digital landscape.
 
+## Table of Contents
+* [Objective](#objective)
+* [Who is being empowered](#who-is-being-empowered)
+* [What technology was used](#what-technology-was-used)
+* [How it can be repurposed](#how-it-can-be-repurposed)
+* [Features and screenshots of the mapplication](#features-and-screenshots-of-the-mapplication)
+* [Documentation](#documentation)
 
-#Documentation 
+## Objective
+
+The objective of this website is to to uplift the stories of POC on UCLA’s campus and make them more accessible to any SEA admits who are unable to attend SEA Admit Weekend, either virtually or in-person. For admitted SEA high schoolers, this may be some of their first times being introduced to the greater APIDA community at UCLA and learning about the history of APIDA groups and student organizing. We hope that this project helps to bridge the knowledge gap from high school to higher education. This showcases classes and APIDA/SEA student orgs focused on POCs in order to help students find their identity, as well as reaffirm that they have spaces to do so. By emphasizing the narratives of current and recent students, this tour seeks to help potential incoming SEA students feel at home and feel seen at UCLA.
+
+## Who is being empowered
+
+## What technology was used
+
+## How it can be repurposed
+
+## Features and screenshots of the mapplication
+
+
+# Documentation 
 Google Sheets: 
 Created a copy of the form response google sheet (titled "Cleaned up...") so question titles, picture links, etc. were more programmer-friendly. Inconvenient in that new form responses need to be copy-pasted from the original form response page to show up on the website; maybe look into using a macro(?) to automate this while preserving the original form responses. 
 
