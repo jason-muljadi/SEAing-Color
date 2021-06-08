@@ -42,4 +42,5 @@ To-do/Issues:
 - [ ] Make story pictures look prettier
 - [ ] Move the scroll events to a different js script to avoid cluttering init
 - [ ] Google script appears to not push some lat/lng values to the sheet despite being able to print them to console
-
+- [ ] Keywords
+- [ ] Preset path 

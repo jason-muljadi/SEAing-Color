@@ -23,7 +23,7 @@ function setUpScroll()
         // left this in case you want something to happen when someone
         // steps out of a div to know what story they are on.
     });
-
+    //Todo: refine steps, make more streamlined 
 
     console.log("finished setup"); 
 }
@@ -42,7 +42,7 @@ function changePicture(step){
 
 function handleScrollEvent(thisStep){
     // optional: console log the step data attributes:
-    // console.log("you are in thisStep: "+thisStep)
+    console.log("changing stuff for story: " + thisStep.index); 
     let thisLat = thisStep.lat.value;
     let thisLng = thisStep.lng.value;
     // tell the map to fly to this step's lat/lng pair:

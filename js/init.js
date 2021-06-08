@@ -9,24 +9,34 @@ let maybeAffirmed = L.featureGroup();
 let notAffirmed = L.featureGroup(); 
 
 let allMapLayers = {
+  //Todo: 
+  //Make layers based on the ethnicity that people entered in the form 
+  //One marker can be in multiple layers 
   "Felt affirmed": didFeelAffirmed, 
   "Maybe affirmed": maybeAffirmed, 
   "Did not feel affirmed": notAffirmed
+}
+
+
+function getEthnicities(){
+  //Look through string, have an enum of SEA ethnicities 
+  //If reached end of string, exit 
 }
 
 const formattedData = [] /* this array will eventually be populated with the contents of the spreadsheet's rows */; 
 
 let url = "https://spreadsheets.google.com/feeds/list/16vj49I0vAirmk54P13zE-V70Je4uq9G3jABb8T8OHA0/oxhqdjk/public/values?alt=json"; 
 
+let keywords = []; 
+
+
+
 fetch(url)
 	.then(response => {
 		return response.json();
 		})
-    .then(data =>{
-                // console.log(data)
-                formatData(data)
-        }
-)
+    .then(data =>{ formatData(data) 
+    })
 
 function addMarker(data){
   let name = data.name; 
@@ -91,7 +101,14 @@ function addStories(data)
 
     divs[i].setAttribute("lat",data[i].lat); 
     divs[i].setAttribute("lng",data[i].lng);
+
+    //Todo: Add buttons based on the keywords in the story 
   }
+}
+
+function addResourceButtons()
+{
+  //call in addStories
 }
 
 function addLayersToMap(formattedData)
