@@ -87,7 +87,10 @@ function addStories(data)
     if(name == "")
       name = "Anonymous"
     divs[i].innerHTML = "<h2>" + name + "</h2>" +
-    "<p>" + data[i].affirmationstory + "</p>";
+    "<p>" + data[i].affirmationstory + "</p>"
+    // +'<div class="btn-group"><button onclick="window.location.href=\'About.html\';">Apple</button>  <button onclick="window.location.href=\'About.html\';">Samsung</button>  <button onclick="window.location.href=\'About.html\';">Sony</button>  </div>'
+    // ^^ poor attempt to add a button without the quotes escaping;; it did not work :')
+    ;
 
     divs[i].setAttribute("lat",data[i].lat); 
     divs[i].setAttribute("lng",data[i].lng);
