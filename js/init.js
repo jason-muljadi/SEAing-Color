@@ -303,9 +303,14 @@ function handleScrollEvent(thisStep){
 }
 
 function changePicture(step){
-  const i = parseInt(step.index.value); 
-  //console.log(typeof i + ": " + i); 
 
+  // we get the what step we are on here:
+  let thisValue = step['data-step'].value
+  const i = parseInt(thisValue); 
+  //console.log(typeof i + ": " + i); 
+  console.log(i)
+
+  // we change the photo based on the step here:
   if(formattedData[i].storypicture){
       const imgsrc = formattedData[i].storypicture; 
       let  imagehtml ='<img src = "' + imgsrc + '" alt = "">'; 

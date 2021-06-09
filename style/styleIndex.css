@@ -155,6 +155,7 @@ header{
   border-width: thin;
   border-color: black; 
   padding: 5px;
+  /* height:500px; */
 }
 /* Todo: Avoid repetitoin with individual story divs*/
 /* .story1{
