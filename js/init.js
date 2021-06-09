@@ -146,7 +146,6 @@ function addStories2(data){
   for(let i = 0; i < data.length; i++)
   {
     const newDiv = document.createElement("div"); // adds a new Div
-    // B2 = 2
     let thisID = "story_"+i //story_0; story_1;
     newDiv.id = thisID; // gives the button a unique id"
     //=2 +10
@@ -162,9 +161,6 @@ function addStories2(data){
       clubKeywords = data[i].keywordsusescripttogeneratebasedonstoryalsoclubs.split(",")
     }
   
-    // newButton.setAttribute("lat",lat); // sets the latitude 
-    // newButton.setAttribute("lng",lng); // sets the longitude
-    
   let theHtmlContent = `<h2>${data[i].name}</h2> <p>${data[i].affirmationstory}</p>`
   // newButton.innerHTML = title; // gives the button a title
 
