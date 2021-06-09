@@ -151,9 +151,11 @@ function addStories2(data){
     newDiv.id = thisID; // gives the button a unique id"
     //=2 +10
     newDiv.className = "story";
-    newDiv.setAttribute("datastep", i);  
+    newDiv.setAttribute("data-step", i);  
     //=B2 + 10
-    
+    newDiv.setAttribute("lat", data[i].lat); 
+    newDiv.setAttribute("lng", data[i].lng); 
+
     
     let clubKeywords = 0
     if (data[i].keywordsusescripttogeneratebasedonstoryalsoclubs){
