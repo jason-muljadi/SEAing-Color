@@ -112,7 +112,35 @@ function createClubButton(lookup,id){
     let targetDiv = document.getElementById(id)
     newClub.setAttribute("clubID",lookup); // sets the latitude
     newClub.addEventListener('click', function(){
-      window.location = "./CulturalOrgs.html#" +lookup;
+    let allModals = document.getElementById(clubModal)
+    const theBlackModalThingy = document.createElement("div");
+      // step 1: generate the unique modals for each using innerHTML
+      // step 1a stylying hint: use the .modal-content class inside of the modal
+      // cool black container
+    const coolModalContent = document.createElement("div")
+    coolModalContent.className = "modal"
+    let modalId = "clubModal_"+id
+      // end step 1 with something like this:
+      theBlackModalThingy.appendChild(coolModalContent)
+      // HELLO! MAKE THE UNIQUE MODALS BEFORE STEP 2
+
+      // step 2: assign each modal either Id or keyword as the id for the modal
+      
+
+      // // let modal = document.getElementById("modalId
+      let modal = document.getElementById(modalId)
+
+      // modal.style.display = "block";
+      // step 3: modify the onlick event to display that unique modal on click
+       window.onclick = function(event) {
+        if (event.target == modal) {
+          
+          modal.style.display = "block";
+        }
+      } 
+      // this is the last step to add all your modals together
+      allModals.appendChild(theBlackModalThingy)
+      // window.location = "./CulturalOrgs.html#" +lookup;
       //make function to link to clubs -> JS go to URL (window.location)
       //add anchors
   }) 
@@ -218,6 +246,16 @@ function addStories(data)
   }
 }
 
+function addClubModals(clubData){
+  let newModalDiv = document.createElement("div")
+  newModalDiv.className = "modal-content"
+  newModalDiv.innerHTML = `<h3>${clubData.name}</h3><p>${clubData.contents}`
+  newModalDiv.id = clubData.id
+  let modalLocal = document.getElementById('modal')
+  modalLocal.appendChild(newModalDiv)
+
+}
+
 function addLayersToMap(formattedData)
 {
   formattedData.forEach(addMarker);
@@ -286,6 +324,7 @@ function formatData(theData){
     addLayersToMap(formattedData); //Todo: take these out 
     console.log(formattedClubData)
     addStories2(formattedData); 
+    addClubModals(clubData)
     setUpScroll(); 
 }
 
@@ -309,10 +348,17 @@ function changePicture(step){
   const i = parseInt(thisValue); 
   //console.log(typeof i + ": " + i); 
   console.log(i)
-
   // we change the photo based on the step here:
   if(formattedData[i].storypicture){
-      const imgsrc = formattedData[i].storypicture; 
+      let imgsrc = formattedData[i].storypicture;
+      //
+      if (imgsrc.includes("https:")){
+        imgsrc = imgsrc
+        console.log('on the imgsrc:')
+      }
+      else{
+        imgsrc = `../images/${imgsrc}`
+      }
       let  imagehtml ='<img src = "' + imgsrc + '" alt = "">'; 
       console.log(imagehtml);
       document.getElementById("story-image").innerHTML = imagehtml;
