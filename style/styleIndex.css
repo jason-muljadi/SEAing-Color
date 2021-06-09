@@ -114,17 +114,17 @@ header{
 #selection{
   grid-area: selection; 
   grid-row: 3; 
-  background-color: red;
+  background-color: rgb(255, 205, 205);
   margin: 8px; 
 }
 
 #tour{
     grid-area: tour; 
-
+    position: sticky; 
     grid-row: 4; 
     grid-template-columns: 0.7fr 0.3fr; 
     grid-template-rows: 0.4fr 0.6fr; 
-    grid-template-areas: "story-image map" "story-image sidebar";
+    grid-template-areas: "map story-image" "map sidebar";
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:rgba(255,255,255,0.75);
     display: grid; 
@@ -132,26 +132,27 @@ header{
 
 #story-image{
     grid-area: story-image; 
-    grid-column: 1; 
-    position: sticky; 
+    grid-column: 2; 
+    grid-row: 1; 
+    /* position: sticky; */
     top: 0; 
     bottom: 0; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:rgba(255,255,255,0.75);
 }
 
-#map{ /*????? */
+#map{ /* help */
   grid-area: map; 
-  grid-column: 2; 
-  grid-row: 1; 
-  /*position: sticky;  doesnt work*/ 
+  grid-column: 1; 
+  grid-row: 1/-1; 
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color:rgba(255,255,255,0.75);
-
 }
 
 #sidebar{
   grid-area: sidebar; 
+  grid-column: 2; 
+  grid-row: 2; 
   display: grid; 
   grid-template-rows: repeat(3, minmax(0, auto-fit)); 
   overflow-y: scroll; 
@@ -161,16 +162,8 @@ header{
   border-style: solid; 
   border-width: thin;
   border-color: black; 
+  padding: 5px;
 }
-/* Todo: Avoid repetitoin with individual story divs*/
-/* .story1{
-  background-color:rgba(255,255,255,0.75);
-}
-
-.story3{
-  background-color:rgba(255,255,255,0.75);
-} */
-
 
 
 img{
@@ -180,7 +173,33 @@ img{
     background-color:rgba(255,255,255,0.75);
 }
 
+.btn-group button {
+  background-color: #6c9bc7; /* Green background */
+  border: 1px #000000; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  z-index: 99999;
+}
 
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #4576a3;
+}
 
 
 #closing{
@@ -202,3 +221,4 @@ footer{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:rgba(255,255,255,0.75);
 } */
+
