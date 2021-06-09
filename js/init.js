@@ -150,6 +150,8 @@ function addStories2(data){
     let thisID = "story_"+i //story_0; story_1;
     newDiv.id = thisID; // gives the button a unique id"
     //=2 +10
+    newDiv.className = "story";
+    newDiv.setAttribute("datastep", i);  
     //=B2 + 10
     
     
