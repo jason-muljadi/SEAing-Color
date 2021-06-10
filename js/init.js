@@ -8,7 +8,7 @@ let didFeelAffirmed = L.featureGroup();
 let maybeAffirmed = L.featureGroup(); 
 let notAffirmed = L.featureGroup(); 
 
-
+let closeId =""
 
 let allMapLayers = {
   "Felt affirmed": didFeelAffirmed, 
@@ -93,12 +93,47 @@ function getClubs(club,lookup){
   
 }
 
+// function newFunction(){
+//   let allModals = document.getElementById("clubModal")
+//   const theBlackModalThingy = document.createElement("div");
+// // step 1: generate the unique modals for each using innerHTML
+// // step 1a stylying hint: use the .modal-content class inside of the modal
+// // cool black container
+//   const coolModalContent = document.createElement("div")
+//   coolModalContent.className = "modal-content"
+
+//   let modalId = "clubModal_"+id
+//     theBlackModalThingy.setAttribute("clubModalId",modalId)
+//   // coolModalContent.innerHTML = 
+//   // `<span class="close">&times;</span> 
+//   // <iframe src="/${formattedClubData.category}.html#${lookup}"></iframe>`; 
+
+// // or ???
+// coolModalContent.innerHTML = `<h3>${formattedClubData.clubname}</h3><p>${formattedClubData.description}`;
+
+// // end step 1 with something like this:
+//   theBlackModalThingy.appendChild(coolModalContent)
+// // HELLO! MAKE THE UNIQUE MODALS BEFORE STEP 2
+// // step 2: assign each modal either Id or keyword as the id for the modal
+//   let modal = document.getElementById(modalId)
+// // modal.style.display = "block";
+// // step 3: modify the onlick event to display that unique modal on click
+//   window.onclick = function(event) {
+//     if (event.target == modal) {
+//       modal.style.display = "block";
+//     }
+//   } 
+// // this is the last step to add all your modals together
+//  allModals.appendChild(theBlackModalThingy)
+// targetDiv.appendChild(newClub)
+// return targetDiv
+// }
 
 function createClubButton(lookup,id){
   // console.log(formattedClubData)
   console.log(lookup)
 
-  let clubValues = formattedClubData.forEach(club => getClubs(club,lookup))
+  let clubValues = formattedClubData.forEach(clubname => getClubs(clubname,lookup))
   // console.log(clubValues)
   // for (let clubDictionary in formattedClubData) {
   //   console.log(clubDictionary)
@@ -110,42 +145,23 @@ function createClubButton(lookup,id){
     // newOrg.innerHTML = '<div id="></div>'
     console.log(newClub)
     let targetDiv = document.getElementById(id)
-    newClub.setAttribute("clubID",lookup); // sets the latitude
-    newClub.addEventListener('click', function(){
-    let allModals = document.getElementById(clubModal)
-    const theBlackModalThingy = document.createElement("div");
-      // step 1: generate the unique modals for each using innerHTML
-      // step 1a stylying hint: use the .modal-content class inside of the modal
-      // cool black container
-    const coolModalContent = document.createElement("div")
-    coolModalContent.className = "modal"
-    let modalId = "clubModal_"+id
-      // end step 1 with something like this:
-      theBlackModalThingy.appendChild(coolModalContent)
-      // HELLO! MAKE THE UNIQUE MODALS BEFORE STEP 2
+    newClub.setAttribute("clubID",lookup); 
 
-      // step 2: assign each modal either Id or keyword as the id for the modal
-      
+    newClub.addEventListener('click', function(event){
+        // console.log(event.target.innerText)
+        let targetID = "clubModal_"+event.target.innerText
+        closeId = targetID
+        let thisModal = document.getElementById(targetID)
+        console.log(targetID)
+        thisModal.style.display = "block"
+    })
 
-      // // let modal = document.getElementById("modalId
-      let modal = document.getElementById(modalId)
-
-      // modal.style.display = "block";
-      // step 3: modify the onlick event to display that unique modal on click
-       window.onclick = function(event) {
-        if (event.target == modal) {
-          
-          modal.style.display = "block";
-        }
-      } 
-      // this is the last step to add all your modals together
-      allModals.appendChild(theBlackModalThingy)
-      // window.location = "./CulturalOrgs.html#" +lookup;
-      //make function to link to clubs -> JS go to URL (window.location)
-      //add anchors
-  }) 
-    targetDiv.appendChild(newClub)
-    return targetDiv
+   
+      // EP: clubModal undefined??? i dont know what is supposed to go here
+      // EP: am i supposed to make clubModal a string like this?? it used to be a variable
+      // EP: or was i supposed to create the allModals div???
+      targetDiv.appendChild(newClub)
+      return targetDiv
   }
 
   // // console.log(document.getElementById(thisID))
@@ -246,15 +262,72 @@ function addStories(data)
   }
 }
 
+// this is where we create the modals!
 function addClubModals(clubData){
-  let newModalDiv = document.createElement("div")
-  newModalDiv.className = "modal-content"
-  newModalDiv.innerHTML = `<h3>${clubData.name}</h3><p>${clubData.contents}`
-  newModalDiv.id = clubData.id
-  let modalLocal = document.getElementById('modal')
-  modalLocal.appendChild(newModalDiv)
+    let modalId = "clubModal_"+clubData.keyword
+    console.log(clubData.keyword)
+    console.log("Hello")
+    // we are going to add our modals to the existing (in html) clubModal div
+    let allModals = document.getElementById("clubModal")
+    
 
+    // this is our black modal container
+    const theBlackModalThingy = document.createElement("div");
+    // step 1: generate the unique modals for each using innerHTML
+    // step 1a stylying hint: use the .modal-content class inside of the modal
+    theBlackModalThingy.id = modalId
+    theBlackModalThingy.className = "modal"
+    console.log(theBlackModalThingy)
+    // this is club container
+    const coolModalContent = document.createElement("div")
+    coolModalContent.className = "modal-content"
+
+
+    coolModalContent.innerHTML = `<span class="close">&times;</span> <h3>${clubData.clubname}</h3><p>${clubData.description}`;
+
+    // const closeModal = document.createElement("button");
+    //   closeModal.type - "button"
+    // closeModal.className = "close"
+    //   closeModal.setAttribute("data-dismiss",modal)
+    //   closeModal.innerHTML = "close"
+    //   console.log(closeModal)
+
+    // coolModalContent.appendChild(closeModal)
+
+    theBlackModalThingy.appendChild(coolModalContent)
+
+      // this is the last step to add all your modals together
+    allModals.appendChild(theBlackModalThingy)
+
+let modal = document.getElementsByClassName("modal-content")
+
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+  modal.style.display = "none";
 }
+
+console.log(modal)
+
+    // targetDiv.appendChild(newClub)
+
+    // let modal1 = document.getElementById(modalId)
+    //   console.log(modal1)
+    //   window.onclick = function(event) {
+    //   if (event.target == modal1) {
+    //   modal1.style.display = "none";
+    //    }
+    //  } 
+
+    // let newModalDiv = document.createElement("div");
+    // newModalDiv.className = "modal-content";
+    // newModalDiv.innerHTML = `<h3>${formattedClubData.clubname}</h3><p>${formattedClubData.description}`;
+    // newModalDiv.id = formattedClubData.id;
+    // let modalLocal = document.getElementById('modal');
+    // modalLocal.appendChild(newModalDiv);
+    
+}
+
+
 
 function addLayersToMap(formattedData)
 {
@@ -323,8 +396,8 @@ function formatData(theData){
     
     addLayersToMap(formattedData); //Todo: take these out 
     console.log(formattedClubData)
+    formattedClubData.forEach(data=>addClubModals(data))
     addStories2(formattedData); 
-    addClubModals(clubData)
     setUpScroll(); 
 }
 
@@ -364,3 +437,15 @@ function changePicture(step){
       document.getElementById("story-image").innerHTML = imagehtml;
   }
 }
+
+// console.log(formattedClubData.keyword)
+// let modal = document.getElementById('clubModalId')
+let modal = document.getElementById(closeId)
+// console.log(modal)
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      console.log("please i cry")
+    }
+  } 
