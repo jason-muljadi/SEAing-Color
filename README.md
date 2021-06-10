@@ -23,12 +23,16 @@ The people who will be empowered from this project are prospective and current S
 In the future, we hope that the future developers of this website will also be empowered to change up the design and the tools so that it may better serve the community. In our team, we currently implemented on what we feel may empower the Southeast Asian community (as some members of our team are a part of the SEA community at UCLA). However, just as the SEA community is always changing, we hope that the website changes as well. We hope that future SEA leaders and technology developers will take up the mantle of upkeeping the website; that is the empowerment we sekk. 
 
 ## What technology was used
-For our landing page, we utilized a hero-image to welcome users to the page and to briefly explain what the website is all about. For the Javascript, we utilized Scrollama and modalities in order to center our focus on the personal stories submitted by SEA Bruins.
+For our landing page, we utilized a hero-image to welcome users to the page and to briefly explain what the website is all about. For the Javascript, we utilized Scrollama and modals in order to center our focus on the personal stories submitted by SEA Bruins.
 
 ## How it can be repurposed
 All of our code is open to be changed on https://github.com/jason-muljadi/SEAing-Color/edit/. We believe that our website should always be open to changed to fit the needs of the community.
 
 ## Features and screenshots of the mapplication
+Modals
+![Screen Shot 2021-06-10 at 1 08 15 AM](https://user-images.githubusercontent.com/81584148/121489040-863fde80-c988-11eb-8067-a7d442666fc7.png)
+![Screen Shot 2021-06-10 at 1 08 24 AM](https://user-images.githubusercontent.com/81584148/121489044-8809a200-c988-11eb-90f0-a25c864e322a.png)
+* Modals have been integrated into the landing page. Buttons corresponding to cultural organizations and resources that survey responses contain can be toggled to open modals, which will reveal supplemental information about these groups. The purpose of these modals are to help touring visitors learn more about the spaces on campus that Bruins have found relevant to their cultural identities.
 
 
 # Documentation 
