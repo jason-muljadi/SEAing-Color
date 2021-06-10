@@ -157,7 +157,8 @@ function createClubButton(lookup,id){
     let targetDiv = document.getElementById(id)
     newClub.setAttribute("clubID",lookup); 
 
-    newClub.addEventListener('click', function(event){
+    newClub.addEventListener('click', function(event)
+    {
         // console.log(event.target.innerText)
         let targetID = "clubModal_"+event.target.innerText
         closeId = targetID
@@ -383,9 +384,10 @@ function formatData(theData){
     
     addLayersToMap(formattedData); //Todo: take these out 
     console.log(formattedClubData)
+  
+    setUpScroll();
     formattedClubData.forEach(data=>addClubModals(data))
     addStories2(formattedData); 
-    setUpScroll(); 
 }
 
 function handleScrollEvent(thisStep){
@@ -427,12 +429,22 @@ function changePicture(step){
 
 // console.log(formattedClubData.keyword)
 // let modal = document.getElementById('clubModalId')
-let modal = document.getElementById(closeId)
+let modal = document.getElementById('clubModal')
 // console.log(modal)
 
 window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-      console.log("please i cry")
+  let thisIDtoClose = event.target.attributes.id.value
+  console.log(event.target.attributes.id.value)
+  // let theXbutton = document.getElementsByClassName('close').getElementById(thisIDtoClose)
+   //JM: Add an ID to the button, using classes
+   //JM: Same concept as 441's closemodal. Instead of closeModal, we need a class called close + the ID
+   //JM: We need to append whatever the closeModal would be. Remember to add
+  let closeModal = document.getElementById(thisIDtoClose)
+ // let theCloseButton = document.getElementById("close_"+thisIDtoClose) // close_clubModal_VSU
+    if (event.target == closeModal) {
+      closeModal.style.display = "none";
+      console.log("please no cry")
     }
+    console.log("please i cry")
   } 
+  
