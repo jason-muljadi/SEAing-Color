@@ -43,4 +43,5 @@ To-do/Issues:
 - [ ] Move the scroll events to a different js script to avoid cluttering init
 - [ ] Google script appears to not push some lat/lng values to the sheet despite being able to print them to console
 - [ ] Keywords
+- [x] Ensure that we have a hero-image that details what the website is and how to navigate it through basic means
 - [ ] Preset path 
