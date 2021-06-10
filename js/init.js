@@ -1,7 +1,7 @@
 const map = L.map('map').setView([34.069311070040534, -118.44530853610334], 15);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D', {
+    attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
 }).addTo(map);
 
 let didFeelAffirmed = L.featureGroup(); 
@@ -396,7 +396,7 @@ function handleScrollEvent(thisStep){
   let thisLat = thisStep.lat.value;
   let thisLng = thisStep.lng.value;
   // tell the map to fly to this step's lat/lng pair:
-  map.flyTo([thisLat,thisLng]);
+  map.flyTo([thisLat,thisLng], 15);
 
   //Todo: Change picture 
 
