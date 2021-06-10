@@ -201,12 +201,11 @@ function addStories2(data){
   for(let i = 0; i < data.length; i++)
   {
     const newDiv = document.createElement("div"); // adds a new Div
+    newDiv.className = "story";
     let thisID = "story_"+i //story_0; story_1;
     newDiv.id = thisID; // gives the button a unique id"
-    //=2 +10
-    newDiv.className = "story";
-    newDiv.setAttribute("data-step", i);  
-    //=B2 + 10
+    
+    newDiv.setAttribute("datastep", i);
     newDiv.setAttribute("lat", data[i].lat); 
     newDiv.setAttribute("lng", data[i].lng); 
 
@@ -385,9 +384,10 @@ function formatData(theData){
     addLayersToMap(formattedData); //Todo: take these out 
     console.log(formattedClubData)
   
-    setUpScroll();
+    
     formattedClubData.forEach(data=>addClubModals(data))
     addStories2(formattedData); 
+    setUpScroll();
 }
 
 function handleScrollEvent(thisStep){
@@ -447,4 +447,3 @@ window.onclick = function(event) {
     }
     console.log("please i cry")
   } 
-  

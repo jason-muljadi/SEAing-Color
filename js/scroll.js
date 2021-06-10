@@ -1,6 +1,6 @@
 
 let scroller = scrollama(); 
-setUpScroll(); 
+//setUpScroll(); 
 
 
 function setUpScroll()
@@ -29,15 +29,20 @@ function setUpScroll()
 }
 
 function changePicture(step){
-    const i = parseInt(step.index.value); 
+    //const i = parseInt(step.data-step.value); 
+    const i = step.datastep.value;
+    console.log("index " + i); 
     //console.log(typeof i + ": " + i); 
 
-    if(formattedData[i].storypicture){
-        const imgsrc = formattedData[i].storypicture; 
-        let  imagehtml ='<img src = "' + imgsrc + '" alt = "">'; 
-        console.log(imagehtml);
-        document.getElementById("story-image").innerHTML = imagehtml;
-    }
+    // if(formattedClubData[i].storypicture){
+    //     const imgsrc = formattedClubData[i].storypicture; 
+
+    // }
+    let imgsrc = "images/" + i + ".jpg"; 
+    let  imagehtml ='<img src = "' + imgsrc + '" alt = "">'; 
+    console.log(imagehtml);
+    document.getElementById("story-image").innerHTML = imagehtml;
+
 }
 
 function handleScrollEvent(thisStep){
