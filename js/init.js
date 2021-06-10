@@ -215,7 +215,10 @@ function addStories2(data){
       clubKeywords = data[i].keywordsusescripttogeneratebasedonstoryalsoclubs.split(",")
     }
   
-  let theHtmlContent = `<h2>${data[i].name}</h2> <p>${data[i].affirmationstory}</p>`
+  let name = data[i].name; 
+  if (name == "")
+    name = "Anonymous";
+  let theHtmlContent = `<h2>` + name + `</h2> <p>${data[i].affirmationstory}</p>`
   // newButton.innerHTML = title; // gives the button a title
 
   // <div class="btn-group">
