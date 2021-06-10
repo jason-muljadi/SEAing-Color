@@ -162,9 +162,12 @@ function createClubButton(lookup,id){
         // console.log(event.target.innerText)
         let targetID = "clubModal_"+event.target.innerText
         closeId = targetID
+        //JX Note: thisModal sometimes shows up as undefined for me, sometimes not -- I think it might be a problem with the order in which some code is executed
         let thisModal = document.getElementById(targetID)
         console.log(targetID)
-        thisModal.style.display = "block"
+        //if(thisModal)
+          thisModal.style.display = "block"
+
     })
 
    
@@ -321,8 +324,8 @@ let modal = document.getElementsByClassName("modal-content")
   modal.style.display = "none";
 }
 
-console.log(modal)
-
+console.log(modal);
+console.log("ADDED A MODAL"); 
     // targetDiv.appendChild(newClub)
 
     // let modal1 = document.getElementById(modalId)
@@ -389,6 +392,7 @@ function formatData(theData){
   
     
     formattedClubData.forEach(data=>addClubModals(data))
+    console.log("Done setting up modals"); 
     addStories2(formattedData); 
     setUpScroll();
 }
@@ -435,18 +439,44 @@ function changePicture(step){
 let modal = document.getElementById('clubModal')
 // console.log(modal)
 
+
 window.onclick = function(event) {
-  let thisIDtoClose = event.target.attributes.id.value
-  console.log(event.target.attributes.id.value)
+  if(event.target.attributes.id != undefined){
+    let clubModalName = event.target.attributes.id.value
+    console.log(clubModalName)
+    console.log(event.target.attributes.class.value); 
+
+    
+    if(event.target.attributes.class.value != null && event.target.attributes.class.value == "modal")
+      event.target.style.display = "none";
+  }
   // let theXbutton = document.getElementsByClassName('close').getElementById(thisIDtoClose)
    //JM: Add an ID to the button, using classes
    //JM: Same concept as 441's closemodal. Instead of closeModal, we need a class called close + the ID
    //JM: We need to append whatever the closeModal would be. Remember to add
-  let closeModal = document.getElementById(thisIDtoClose)
- // let theCloseButton = document.getElementById("close_"+thisIDtoClose) // close_clubModal_VSU
-    if (event.target == closeModal) {
-      closeModal.style.display = "none";
-      console.log("please no cry")
-    }
-    console.log("please i cry")
+//   let closeModal = document.getElementById(thisIDtoClose)
+//  // let theCloseButton = document.getElementById("close_"+thisIDtoClose) // close_clubModal_VSU
+//     if (event.target == closeModal) {
+//       let clubModalDiv = document.getElementById("clubModal");
+//       clubModalDiv.style.display = "none";
+//       console.log("please no cry")
+//     }
+//     console.log("please i cry")
   } 
+
+  // window.onclick = function(event) {
+  //   let thisIDtoClose = event.target.attributes.id.value
+  //   console.log(event.target.attributes.id.value)
+  //   // let theXbutton = document.getElementsByClassName('close').getElementById(thisIDtoClose)
+  //    //JM: Add an ID to the button, using classes
+  //    //JM: Same concept as 441's closemodal. Instead of closeModal, we need a class called close + the ID
+  //    //JM: We need to append whatever the closeModal would be. Remember to add
+  //   let closeModal = document.getElementById(thisIDtoClose)
+  //  // let theCloseButton = document.getElementById("close_"+thisIDtoClose) // close_clubModal_VSU
+  //     if (event.target == closeModal) {
+  //       let clubModalDiv = document.getElementById("clubModal");
+  //       clubModalDiv.style.display = "none";
+  //       console.log("please no cry")
+  //     }
+  //     console.log("please i cry")
+  //   } 
