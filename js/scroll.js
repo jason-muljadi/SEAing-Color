@@ -29,7 +29,7 @@ function setUpScroll()
 }
 
 function changePicture(step){
-    const i = parseInt(step.data-step.value); 
+    const i = parseInt(step.index.value); 
     //console.log(typeof i + ": " + i); 
 
     if(formattedData[i].storypicture){

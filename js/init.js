@@ -11,9 +11,18 @@ let notAffirmed = L.featureGroup();
 let closeId =""
 
 let allMapLayers = {
+  //Todo: 
+  //Make layers based on the ethnicity that people entered in the form 
+  //One marker can be in multiple layers 
   "Felt affirmed": didFeelAffirmed, 
   "Maybe affirmed": maybeAffirmed, 
   "Did not feel affirmed": notAffirmed
+}
+
+
+function getEthnicities(){
+  //Look through string, have an enum of SEA ethnicities 
+  //If reached end of string, exit 
 }
 
 const formattedData = [] /* this array will eventually be populated with the contents of the spreadsheet's rows */; 
@@ -24,15 +33,16 @@ let cluburl = "https://spreadsheets.google.com/feeds/list/16vj49I0vAirmk54P13zE-
 getClubData(cluburl)
 
 
+let keywords = []; 
+
+
+
 fetch(url)
 	.then(response => {
 		return response.json();
 		})
-    .then(data =>{
-                // console.log(data)
-                formatData(data)
-        }
-)
+    .then(data =>{ formatData(data) 
+    })
 
 function addMarker(data){
   let name = data.name; 
@@ -259,6 +269,8 @@ function addStories(data)
     
     divs[i].setAttribute("lat",data[i].lat); 
     divs[i].setAttribute("lng",data[i].lng);
+
+    //Todo: Add buttons based on the keywords in the story 
   }
 }
 
@@ -339,31 +351,6 @@ function addLayersToMap(formattedData)
   L.control.layers(null,allMapLayers, {collapsed:false}).addTo(map);
 }
 
-let scroller = scrollama(); 
-function setUpScroll()
-{
-  console.log("setting up scroll");
-    scroller
-    .setup({
-        step: ".story" // this is the name of the class that we are using to step into
-    })
-    // do something when you enter a "step":
-    .onStepEnter((response) => {
-        // you can access these objects: { element, index, direction }
-        // use the function to use element attributes of the button 
-        // it contains the lat/lng: 
-        console.log("Attempting to change something on scroll...");
-        handleScrollEvent(response.element.attributes); //Attributes of the html element...
-    })
-    .onStepExit((response) => {
-        // { element, index, direction }
-        // left this in case you want something to happen when someone
-        // steps out of a div to know what story they are on.
-    });
-
-
-    console.log("finished setup"); 
-}
 
 
 function formatClubData(clubData){

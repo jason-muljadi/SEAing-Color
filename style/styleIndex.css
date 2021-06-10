@@ -5,7 +5,7 @@ body{
     display: grid;
     /* grid-template-columns: 0.7fr 0.3fr;  */
     grid-auto-rows: minmax(5px, auto); /* should look at this later */  
-    grid-template-areas: "header" "landing" "tour" "footer"; 
+    grid-template-areas: "header" "landing" "selection" "tour" "footer"; 
     font-family: Verdana; 
 }
 
@@ -111,10 +111,17 @@ header{
     text-align: center;
 }
 
+#selection{
+  grid-area: selection; 
+  grid-row: 3; 
+  background-color: red;
+  margin: 8px; 
+}
+
 #tour{
     grid-area: tour; 
 
-    grid-row: 3; 
+    grid-row: 4; 
     grid-template-columns: 0.7fr 0.3fr; 
     grid-template-rows: 0.4fr 0.6fr; 
     grid-template-areas: "story-image map" "story-image sidebar";
