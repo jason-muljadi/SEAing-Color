@@ -36,21 +36,36 @@ Modals
 
 
 # Documentation 
-Google Sheets: 
-Created a copy of the form response google sheet (titled "Cleaned up...") so question titles, picture links, etc. were more programmer-friendly. Inconvenient in that new form responses need to be copy-pasted from the original form response page to show up on the website; maybe look into using a macro(?) to automate this while preserving the original form responses. 
+*Intended for developers/maintainers of this project, not very relevant for users browsing the site 
+
+###### Form data: 
+* Don't use the original Google Forms-generated spreadsheet — created a copy of the form response google sheet so question titles, formatting, etc. were more programmer-friendly.  
+
+###### Adding stories: 
+* Publish the form response sheet to web and get the JSON by putting the url into [JSON Returner](https://sandbox.idre.ucla.edu/tools/gsJson/). The sheet data is put into an array of objects; each object represents a row, and row entries are properties. e.g. if the stories are in column 3 and cell A3 contains "affirmationstory", you can access a specific affirmation story using data[i].affirmationstory. 
 
 
-//TODO: add documentation for js functions, css, html formatting 
-Scrollama implementation: Each story is a div with the class "story"; init.js adds lat and lng attributes to make flyto faster. 
+###### Adding story sections to map: 
+* Stories are added by calling addStories2(data), which adds every story in the spreadsheet. ```data``` is the array of formatted data. This is called on the initial load of the webpage in init.js; there's no need to call it afterward. 
+* The divs for each story in the map tour are added dynamically into the ```sidebar``` div in index.html, so ```sidebar``` should be empty before init.js is called — hardcoding story divs would probably break the tour.
+* Note: All story divs must have ```story``` as the class attribute — the scroll function depends on this to fly to a marker/change the image. 
+
+
+###### Storymap feature: 
+* Scroll functions are in scroll.js 
+* The scrolling feature is implemented with a combination of Scrollama and Leaflet and draws heavily from [Scrollamappa by @albertkun](https://github.com/albertkun/scrollamappa). 
+* Currently: upon scrolling to a new story, the story image changes, and the map flies to the marker for that story. This is handled in handleScrollEvent, which is called by onStepEnter. 
+* Currently the triggers/transitions are rather clunky; we plan to improve this feature so that it's more intuitive which story you're scrolling to. 
+
+
+###### Planned features: 
+* Allow users to filter stories by ethnicity to make the tour more personalized. Plan to implement by de/activating map layers based on checkboxes(?). Currently the map layers are not set up by ethnicity — use the 
 
 
 To-do/Issues: 
-- [ ] The website looks different on Github Pages and local machine :(
 - [ ] Make it clear which marker is being flown to on scroll; right now there's only an onScrollEnter event  
-- [x] Change pictures on enter
-- [ ] Make story pictures look prettier
-- [ ] Move the scroll events to a different js script to avoid cluttering init
+- [ ] Improve story picture transitions
 - [ ] Google script appears to not push some lat/lng values to the sheet despite being able to print them to console
-- [ ] Keywords
+- [x] Use keywords from stories to create links to clubs/resources 
 - [x] Ensure that we have a hero-image that details what the website is and how to navigate it through basic means
-- [ ] Preset path 
+- [ ] Preset tour path 
