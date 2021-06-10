@@ -5,7 +5,7 @@ body{
     display: grid;
     /* grid-template-columns: 0.7fr 0.3fr;  */
     grid-auto-rows: minmax(5px, auto); /* should look at this later */  
-    grid-template-areas: "header" "landing" "selection" "tour" "footer"; 
+    grid-template-areas: "header" "hero-image" "selection" "tour" "footer"; 
     font-family: Verdana; 
 }
 
@@ -100,7 +100,7 @@ header{
     color: black;
   }  
 
-#landing{
+/* #landing{
 
   grid-row: 2; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -109,6 +109,50 @@ header{
     justify-content: center;
     margin: 8px;
     text-align: center;
+} */
+
+.hero-image {
+  grid-area: hero-image;
+  margin: 300px;
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-0/p640x640/57468041_1052207834979297_494513407655936000_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=e3f864&_nc_ohc=a1AA50JGeusAX8VtBy4&_nc_ht=scontent-lax3-2.xx&tp=6&oh=ab0aa0428b93450f67762dbfe47cf05f&oe=60E870C4");
+  /* Set a specific height */
+  width : 50%;
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  width : 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
 }
 
 #selection{
