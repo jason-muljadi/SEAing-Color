@@ -1,7 +1,7 @@
 const map = L.map('map').setView([34.069311070040534, -118.44530853610334], 15);
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
 }).addTo(map);
 
 let didFeelAffirmed = L.featureGroup(); 
