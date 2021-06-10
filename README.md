@@ -18,10 +18,15 @@ This map is supplementary to the Southeast Asian Admit Weekend festivities, but 
 The objective of this website is to to uplift the stories of POC on UCLA’s campus and make them more accessible to any SEA admits who are unable to attend SEA Admit Weekend, either virtually or in-person. For admitted SEA high schoolers, this may be some of their first times being introduced to the greater APIDA community at UCLA and learning about the history of APIDA groups and student organizing. We hope that this project helps to bridge the knowledge gap from high school to higher education. This showcases classes and APIDA/SEA student orgs focused on POCs in order to help students find their identity, as well as reaffirm that they have spaces to do so. By emphasizing the narratives of current and recent students, this tour seeks to help potential incoming SEA students feel at home and feel seen at UCLA.
 
 ## Who is being empowered
+The people who will be empowered from this project are prospective and current Southeast Asian UCLA students. We hope that the personal stories and affirmations that are being shared in this website will allow others to feel that kinship in a space that they may or may not have ever visited. We hope that, through looking at the stories and affrimations of Southeast Asian identity, people are able to (re)connect to their Southeast Asian identity, and feel empowered in theirselves. 
+
+In the future, we hope that the future developers of this website will also be empowered to change up the design and the tools so that it may better serve the community. In our team, we currently implemented on what we feel may empower the Southeast Asian community (as some members of our team are a part of the SEA community at UCLA). However, just as the SEA community is always changing, we hope that the website changes as well. We hope that future SEA leaders and technology developers will take up the mantle of upkeeping the website; that is the empowerment we sekk. 
 
 ## What technology was used
+For our landing page, we utilized a hero-image to welcome users to the page and to briefly explain what the website is all about. For the Javascript, we utilized Scrollama and modalities in order to center our focus on the personal stories submitted by SEA Bruins.
 
 ## How it can be repurposed
+All of our code is open to be changed on https://github.com/jason-muljadi/SEAing-Color/edit/. We believe that our website should always be open to changed to fit the needs of the community.
 
 ## Features and screenshots of the mapplication
 
